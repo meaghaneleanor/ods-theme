@@ -4,11 +4,13 @@ This repo is an extension of Foundation Sites 6, with settings configured for On
 
 ## Installation
 
-You can install this project from the Gitlab repository by running `npm i git+ssh://[git@git.ssh.ontariogovernment.ca:8080]:jenny.zhang/ods-theme.git#v1.0.0` . Alternatively, you can add this to your `package.json`:
+For now, this repo lives in a private Gitlab repository. To access it, you have to create a [personal access token](https://git.ontariogovernment.ca/profile/personal_access_tokens) for your Gitlab. Add that access token to your local environment with the name `GITLAB_ACCESS_TOKEN`.
 
-```
-"ods-theme": "git+ssh://[git@git.ssh.ontariogovernment.ca:8080]:jenny.zhang/ods-theme.git#v1.0.0"
-```
+Then you can install this project from the Gitlab repository by running `git+https://oauth2:${GITLAB_ACCESS_TOKEN}@git.ontariogovernment.ca/jenny.zhang/ods-theme.git#v1.0.0` . Alternatively, you can add this to your `package.json`:
+
+`"ods-theme": "git+https://oauth2:${GITLAB_ACCESS_TOKEN}@git.ontariogovernment.ca/jenny.zhang/ods-theme.git#v1.0.0"`
+
+Do not commit your Gitlab access token to the repo itself!
 
 ## CSS
 
