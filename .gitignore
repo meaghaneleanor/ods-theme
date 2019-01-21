@@ -14,5 +14,8 @@ npm-debug.log
 # Babel server build
 lib/
 
+# Compiled CSS
+dist/
+
 # dsstore
 .DS_Store

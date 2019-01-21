@@ -1,44 +1,38 @@
-const fractal = require('./fractal.js');
-const logger = fractal.cli.console;
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
-const styleDir = 'fractal/**/*.scss';
+const minify = require('gulp-clean-css');
+// const rename = require('gulp-rename');
+const styleMaster = 'src/ods-theme.scss';
+const styleDir = 'src/**/*.scss';
 
-gulp.task('appStyle', (done) => {
-  gulp.src([styleDir, '!fractal/theme/**', '!fractal/build/**'])
-    .pipe(sass().on('error', sass.logError))
+gulp.task('sass', (done) => {
+  gulp.src(styleMaster)
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(sourcemaps.init())
-    .pipe(concat('app.css'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./fractal/public/styles'));
+    .pipe(concat('ods-theme.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist/'));
     done();
 });
 
-gulp.task('sass', (done) => {
-  gulp.src('fractal/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest((f) => {
-      return f.base;
-    }));
+gulp.task('sass-minify', (done) => {
+  gulp.src(styleMaster)
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(concat('ods-theme.min.css'))
+    .pipe(minify())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist'));
     done();
 });
 
 gulp.task('watch', (done) => {
-  gulp.watch(styleDir, { ignoreInitial: false }, gulp.series('sass', 'appStyle'));
+  gulp.watch(styleDir, { ignoreInitial: false }, gulp.series('sass'));
   done();
 });
 
-gulp.task('fractal:dev', () => {
-  const server = fractal.web.server({
-    sync: true
-  });
+gulp.task('default', gulp.series('watch'));
 
-  server.on('error', err => logger.error(err.message));
-  return server.start().then(() => {
-    logger.success(`Fractal server is now running at ${server.url}`);
-  });
-});
-
-gulp.task('default', gulp.series(['fractal:dev', 'watch']));
+gulp.task('deploy', gulp.series('sass-minify'));

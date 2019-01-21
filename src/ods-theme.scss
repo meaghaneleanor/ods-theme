@@ -1,0 +1,52 @@
+/* -----------------------------------------------------------------------------
+
+    This stylesheet attempts to follow the ITCSS - Inverted Triangle CSS
+    model of css architecture proposed by Harry Roberts. See overview here:
+    https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+
+    The categories are divided into 7 sections:
+
+    1. Settings               DOES NOT generate actual CSS
+          Global settings, including vendor
+
+    2. Tools                  DOES NOT generate actual CSS
+          Global mixins, functions
+
+    3. Generics
+          High level and far-reaching styles, modifications of these should be
+          minimal, e.g. resets, normalize, etc.
+
+    4. Elements
+          Bare unclassed HTML elements - type selectors ONLY
+
+    5. Objects
+          Non-cosmetic design patterns, should have at most one class selector
+          Ref object-oriented CSS: https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/
+
+    6. Components
+          Recognizable design patterns, should have At least one class selector.
+
+          Within Vue's component system, these should ideally be
+          contained within each individual component. Rule of thumb: if deleting
+          a component requires deleting that style, that style should live
+          within the component. However, consider whether you need to apply
+          snowflake styles to that component, or whether you should be reusing
+          existing patterns
+
+    7. Overrides
+          Helper classes that should override all other patterns, for specific
+          behaviours such as clearfixing, text alignment, etc.
+
+
+    Responsive styles should be contained within each selector, e.g.:
+
+      h1 {
+        font-size: 3rem;
+
+        @include break-point(medium, down) {
+          font-size: 2rem;
+        }
+      }
+
+
+----------------------------------------------------------------------------- */
