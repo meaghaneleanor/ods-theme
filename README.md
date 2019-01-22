@@ -4,13 +4,11 @@ This repo is an extension of Foundation Sites 6, with settings configured for On
 
 ## Installation
 
-For now, this repo lives in a private Gitlab repository. To access it, you have to create a [personal access token](https://git.ontariogovernment.ca/profile/personal_access_tokens) for your Gitlab. Add that access token to your local environment with the name `GITLAB_ACCESS_TOKEN`.
+For now, this repo lives in a private Gitlab repository. To access it, you have to create a [personal access token](https://git.ontariogovernment.ca/profile/personal_access_tokens) for your Gitlab. Then add this to your `package.json` and run `npm i`:
 
-Then you can install this project from the Gitlab repository by running `git+https://oauth2:${GITLAB_ACCESS_TOKEN}@git.ontariogovernment.ca/jenny.zhang/ods-theme.git#v1.0.0` . Alternatively, you can add this to your `package.json`:
+`"ods-theme": "git+https://oauth2:<GITLAB_ACCESS_TOKEN>@git.ontariogovernment.ca/jenny.zhang/ods-theme.git",`
 
-`"ods-theme": "git+https://oauth2:${GITLAB_ACCESS_TOKEN}@git.ontariogovernment.ca/jenny.zhang/ods-theme.git#v1.0.0"`
-
-Do not commit your Gitlab access token to the repo itself!
+Note: This is just a temporary workaround while the CSS package is in a private repo. Do not actually commit your Gitlab access token to the repo itself!
 
 ## CSS
 
