@@ -15,7 +15,7 @@ Note: This is just a temporary workaround while the CSS package is in a private 
 Once you have done that, you can do one of two things:
 
 1. include the compiled file CSS file in your project by referencing it directly at `node_modules/ods-theme/dist/css/ods-theme.min.css`
-2. require the SASS components by importing `node_modules/ods-theme/src/ods-theme.scss`
+2. require the SASS components by importing it as a regular module with something like `import OdsTheme from 'ods-theme'`
 
 Refer to the [Foundation Sites Docs](https://foundation.zurb.com/sites.html) to see how to use and override Foundation settings. Refer to the folder `src/tools` to see the ODS-specific variables and mixins that you can override or extend.
 
