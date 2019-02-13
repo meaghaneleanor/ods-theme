@@ -1,0 +1,6 @@
+@mixin ods-header-calc($type){
+  font-size: rem-calc(map-get(map-get(map-get($header-styles, 'small'), $type), 'font-size'));
+  @include breakpoint(medium){
+    font-size: rem-calc(map-get(map-get(map-get($header-styles, 'medium'), $type), 'font-size'));
+  }
+}

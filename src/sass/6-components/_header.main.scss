@@ -1,0 +1,99 @@
+.ods-main-header {
+  background: $ods-bg-header;
+  padding-top: 1rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.ods-main-header__logo {
+  @extend .ods-grid-cell;
+  @extend .small-5;
+  @extend .medium-3;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.ods-main-header__search {
+  @extend .ods-grid-cell;
+  @extend .medium-5;
+  @extend .large-6;
+
+  padding: 0 0.5rem; // @todo - move this somewhere into a var
+}
+
+.ods-main-header__site-nav {
+  @extend .ods-grid-cell;
+  @extend .small-7;
+  @extend .medium-4;
+  @extend .large-3;
+
+}
+
+.ods-main-search__text-entry {
+  outline-offset: 0;
+}
+
+.ods-site-nav__nav-toggle {
+  color: #fff;
+  line-height: 2rem;
+  padding: .2rem .7rem;
+  margin: 0 0 0 1.5rem;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.ods-site-nav__translation-link {
+  font-size: $small-font-size;
+  color: white;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  &:hover {
+    color: white;
+  }
+}
+
+.ods-main-header__logo-icon {
+  font-size: 2.7rem;
+  color: white;
+  margin-top: -0.4rem;
+  display: block;
+}
+
+.ods-site-nav__dropdown-pane {
+  color: $body-font-color;
+  font-size: 0.875rem;
+  padding: 1.25rem;
+  width: rem-calc(250);
+  background: white;
+  box-shadow: 0 1px 3px $ods-medium-gray;
+
+  &:before, &:after {
+    left: auto;
+    position: absolute;
+    right: 31px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+  }
+  &:before {
+    border: 6px inset;
+    border-color: transparent transparent #fff;
+    border-style: solid;
+    top: -12px;
+    z-index: 89;
+  }
+  &:after {
+    top: -14px;
+    border: 7px inset;
+    border-color: transparent transparent #ccc;
+    border-style: solid;
+    z-index: 88;
+  }
+}
+
+.ods-site-nav__dropdown-links {
+  padding: 0.5rem;
+  line-height: 1.15rem;
+}

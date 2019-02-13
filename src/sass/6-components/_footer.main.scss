@@ -1,0 +1,62 @@
+.ods-main-footer {
+  background: $ods-bg-footer;
+  margin-top: 1rem;
+  padding: 2rem 0 1.5rem;
+  border-top: 1px solid $ods-border-footer;
+  a {
+    color: $ods-font-color;
+  }
+}
+
+.ods-main-footer .grid-container {
+  padding: 0;
+}
+
+.ods-main-footer__topic-links-list {
+  li {
+    line-height: 1.5rem;
+    margin-bottom: 0.625rem;
+  }
+}
+
+.ods-main-footer__topic-link {
+  line-height: 1.5rem;
+}
+
+.ods-main-footer__ministry-photo {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+}
+
+.ods-main-footer__ministry-subheading {
+  @extend h3;
+  color: $body-font-color;
+}
+
+.ods-main-footer__subheading {
+  @extend h4;
+  color: $body-font-color;
+}
+
+.ods-main-footer__notice-links {
+  font-size: $small-font-size;
+}
+
+.ods-main-footer__swoosh-bg {
+  background: url('#{$assetsDir}/footer-swoosh-bg.png') $ods-bg-footer repeat-x top;
+  width: 100%;
+  height: 96px;
+
+}
+
+
+
+.ods-main-footer__swoosh-right {
+  display: block;
+  width: 560px;
+  height: 96px;
+  position: absolute;
+  right: 0;
+  background: url('#{$assetsDir}/footer-swoosh-right.png') $ods-bg-footer no-repeat top right;
+}

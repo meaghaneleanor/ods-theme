@@ -1,0 +1,42 @@
+.ods-grid-container {
+  @extend .grid-container;
+  padding: 0 .9375rem;
+}
+
+.ods-grid-row {
+  @extend .grid-x;
+}
+
+.ods-grid-cell {
+  @extend .cell;
+}
+
+.ods-show-for-medium {
+  @extend .show-for-medium;
+}
+
+.ods-full-width {
+  position: relative;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: 0;
+    background: inherit;
+    height: inherit;
+  }
+  &:before {
+    width: 100vw;
+    right: 100%;
+    border: inherit;
+  }
+  &:after {
+    width: 100vw;
+    left: 100%;
+    border: inherit;
+  }
+}
+
+.ods-float-right {
+  float: right !important;
+}
