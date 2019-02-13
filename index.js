@@ -1,2 +1,5 @@
-export { odsTheme } from './src/ods-theme.scss';
-export { Foundation } from 'foundation-sites';
+import Foundation from 'foundation-sites'
+
+window.$ = window.jQuery = require('jquery')
+
+export default { Foundation };
