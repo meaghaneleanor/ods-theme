@@ -4,13 +4,23 @@ const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const minify = require('gulp-clean-css');
 const rename = require('gulp-rename');
+
 const srcDir = 'src/**';
 const styleMain = 'src/sass/ods-theme.scss';
 const styleDir = 'src/sass/**';
 
+const sassOptions = {
+  outputStyle: 'expanded',
+  includePaths: [
+    '..',
+    '../..',
+    '../../..'
+  ]
+}
+
 gulp.task('sass', (done) => {
   gulp.src(styleMain)
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(sourcemaps.init())
     .pipe(concat('ods-theme.css'))
     .pipe(sourcemaps.write('.'))
@@ -20,7 +30,7 @@ gulp.task('sass', (done) => {
 
 gulp.task('sass-minify', (done) => {
   gulp.src(styleMain)
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(sourcemaps.init())
     .pipe(concat('ods-theme.min.css'))
     .pipe(minify())
