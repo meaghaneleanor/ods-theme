@@ -7,7 +7,7 @@
 $fontDir: '../fonts' !default;
 $assetsDir: '../assets' !default;
 
-@import '../../node_modules/foundation-sites/scss/foundation';
+@import 'node_modules/foundation-sites/scss/foundation';
 
 @import "./1-settings/_foundation.settings";
 @import "./1-settings/_colours.global";
