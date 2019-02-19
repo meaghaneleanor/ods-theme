@@ -4,8 +4,21 @@
 
 The CSS architecture for the ODS follows a combination of the Block Element Modifier ([BEM](http://getbem.com/introduction/)) and the Inverted Triangle ([ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)) systems. For more detail on the structure adopted here, please see the [architecture documentation file](./architecture.md).
 
-## Namespacing
+## Basics
 
+### Directory variables
+
+Because this project is designed to work both as a repository of dynamic variables and as a set of static distributed files, there are a few SASS variables provided to make sure that asset paths are accurate. These are: `$fontDir` and `$assetDir`, and are set to `../fonts` and `../assets` by default (which is relative to the compiled CSS from the `dist` folder).
+
+When specifying paths to anything related to those folders, make sure to use those variables in the CSS instead of relative paths:
+
+`src: url('#{$fontDir}/...');`
+
+### Assets
+
+Any assets in the `/src` file that are not `.scss` files will be copied, with directory structure maintained, to the `dist` folder upon deploying.
+
+## Namespacing
 All classes specific to the Ontario.ca look and feel should be prefixed with `.ods-`, to reduce the likelihood of conflicting with framework class names or any other CSS you may be applying to your system.
 
 ### App-specific namespacing
@@ -14,15 +27,38 @@ It is recommended that you also adopt an app-specific namespace to differentiate
 ### Functional namespacing
 If you need to add dynamic behaviour to a component, create a new class for it instead of applying it to an existing class. This prevents accidentally breaking dynamic behaviour when CSS attributes change, and clearly communicates to the reader what the function of the class is. For example, for the health project described above, all classes tied to Javascript functions might be prefixed with `.ltc-js-`.
 
+## Using the Foundation Framework
+
+As much as possible, avoid baking in framework-specific classes. With the exception of layout classes (grids, columns, etc), you should treat the Foundation framework as decorators for your own classes. For example, if you want to specify a button that looks like the Foundation button, instead of using:
+
+```<a class="button">```
+
+You should use a name-spaced
+
+```<a class="ods-button">```
+
+And then extend the Foundation button in SASS:
+
+```
+.ods-button {
+  @extend .button;
+  // ...additional styes
+}
+```
+
+This has the main benefit of allowing you to switch out different frameworks in the future, so that if you no longer want to use Foundation, you only need to change the extension in `.ods-button` instead of swaping out class specifications elsewhere in the app.
+
+A similar principle applies to CSS variables. Instead of using `$body-font-color`, which is a Foundation-provided name, create an ODS-specific variable called `$ods-font-color` and set that variable to `$body-font-color`.
+
+## Chaining vs. extending
+
 ## Selector specificity
 
 ## Nesting
 
 ## Mobile development
 
-## Using Frameworks
-
-As much as possible, avoid baking in framework-specific classes.
+## Icon fonts
 
 ## Sources
 

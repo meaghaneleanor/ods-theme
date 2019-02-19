@@ -1,10 +1,10 @@
+# ODS Theme CSS Architecture
 
 ## BEM
 
+// Explanation for BEM
 
 ## ITCSS
-
-
 
 The categories are divided into 7 sections:
 
