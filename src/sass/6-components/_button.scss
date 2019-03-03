@@ -1,0 +1,49 @@
+.ods-button,
+input.ods-button {
+    @extend .button;
+    box-shadow: 0 2px 4px $ods-button-box-shadow-color;
+    line-height: normal;
+    margin-right: 1rem;
+    padding: .75rem 1.5rem .8125rem;
+
+    &:active,
+    &:focus,
+    &:hover {
+        box-shadow: 0 1px 3px $ods-button-box-shadow-color;
+    }
+
+    &[disabled] {
+        background: $ods-button-disabled-color;
+        box-shadow: none;
+        opacity: 1;
+        transition: none;
+
+        &:hover {
+            background: $ods-button-disabled-color;
+        }
+    }
+
+    abbr,
+    abbr[title] {
+        text-decoration: underline dotted;
+        border-bottom: none;
+    }
+}
+
+.ods-button--primary,
+input.ods-button--primary {
+    @extend .ods-button;
+    @include ods-button-color($ods-button-primary, $ods-button-primary-hover, $ods-button-primary-text-color);
+}
+
+.ods-button--secondary,
+input.ods-button--secondary {
+    @extend .ods-button;
+    @include ods-button-color($ods-button-secondary, $ods-button-secondary-hover, $ods-button-secondary-text-color);
+}
+
+.ods-button--alert,
+input.ods-button--alert {
+    @extend .ods-button;
+    @include ods-button-color($ods-button-alert, $ods-button-alert-hover, $ods-button-primary-text-color);
+}

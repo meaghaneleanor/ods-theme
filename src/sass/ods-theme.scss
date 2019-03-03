@@ -23,12 +23,10 @@ $assetsDir: '../assets' !default;
 @import "./5-objects/_layout";
 @import "./5-objects/_visibility";
 
+@import "./6-components/button";
 @import "./6-components/_header.main";
 @import "./6-components/_footer.main";
 
-.ods-button {
-  @extend .button;
-}
 
 .ods-list--no-bullet {
   list-style: none;

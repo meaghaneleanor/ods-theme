@@ -4,3 +4,16 @@
     font-size: rem-calc(map-get(map-get(map-get($header-styles, 'medium'), $type), 'font-size'));
   }
 }
+
+@mixin ods-button-color($color1, $color2, $text-color) {
+  background: $color1;
+  border: 0 solid $color2;
+  color: $text-color;
+
+  &:active,
+  &:focus,
+  &:hover {
+      background: $color2;
+      color: $text-color;
+  }
+}
