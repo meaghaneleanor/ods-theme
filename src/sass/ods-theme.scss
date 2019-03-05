@@ -25,6 +25,7 @@ $assetsDir: '../assets' !default;
 
 @import "./6-components/_header.main";
 @import "./6-components/_footer.main";
+@import "./6-components/panel";
 
 .ods-button {
   @extend .button;
@@ -42,8 +43,10 @@ $assetsDir: '../assets' !default;
   }
 }
 
-
-
 .ods-margin--top-double {
   margin-top: 2rem;
+}
+
+.ods-padding--bottom-double {
+  padding-bottom: 2rem;
 }

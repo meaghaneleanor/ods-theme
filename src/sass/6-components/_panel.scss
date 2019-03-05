@@ -1,0 +1,68 @@
+.ods-panel {
+    border-color: $ods-panel-border;
+    border-style: solid;
+    border-width: 0 0 0 .9375rem;
+    color: $ods-panel-font-color;
+    margin-bottom: 1.25rem;
+    padding: .9375rem 2rem .9375rem .9375rem;
+    position: relative;
+    
+    p:last-child {
+        margin: 0;
+    }
+
+    &__close-button {
+        font-size: 1.875rem;
+        line-height: .9;
+        padding: 0 6px 6px;
+        position: absolute;
+        right: .25em;
+        top: 30%;
+    }
+
+    &__image--right {
+        clear: right;
+        float: right;
+        margin: 0 0 1em 1.5em;
+    }
+
+        //panel variations
+        &--aside {
+            background: $ods-panel-aside-bg;
+        }
+
+        &--callout {
+            background: $ods-panel-callout-bg;
+        }
+
+        &--dark {
+            background: $ods-panel-dark-bg;
+            color: $ods-panel-dark-font-color;
+
+            a, a:visited, a:focus,
+            abbr, abbr[title] {
+                color: $ods-panel-dark-link-color;
+                text-decoration: underline;
+
+                &:hover {
+                    color: $ods-panel-dark-font-color;
+                }
+            }
+
+            abbr, abbr[title] {
+               border-bottom: 2px dotted $ods-panel-dark-link-color; 
+            }
+        }
+
+        &--error {
+            background: $ods-panel-error-bg;
+        }
+        
+        &--success {
+            background: $ods-panel-success-bg;
+        }
+        
+        &--warning {
+            background: $ods-panel-warning-bg;
+        }
+}
