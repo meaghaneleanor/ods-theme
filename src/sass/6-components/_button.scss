@@ -24,12 +24,6 @@ input[type="submit"] {
             background: $ods-button-disabled-color;
         }
     }
-
-    abbr,
-    abbr[title] {
-        text-decoration: underline dotted;
-        border-bottom: none;
-    }
 }
 
 .ods-button--primary,
