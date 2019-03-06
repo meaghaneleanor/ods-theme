@@ -1,10 +1,29 @@
-$ods-bg-header: #333;
-$ods-bg-footer: #ededed;
-
-$ods-border-footer: #d9d9d9;
-
-$ods-font-color: $body-font-color;
+//Settings
 $ods-medium-gray: #666;
 $ods-light-gray: #737373;
 
+//Generics
+$ods-font-color: $body-font-color;
+$ods-label-font-color-dark: #4d4d4d;
+$ods-label-font-color-light: #fff;
+
+//Elements
 $ods-link-color: $anchor-color;
+
+//Components
+$ods-bg-header: #333;
+
+$ods-bg-footer: #ededed;
+$ods-border-footer: #d9d9d9;
+
+$ods-label-default-bg: #ededed;
+$ods-label-updated-bg: #fafad2;
+$ods-label-open-bg: #e6fad2;
+$ods-label-closed-bg: #fad2d2;
+$ods-label-under-review-bg: #d2d1eb;
+$ods-label-upcoming-bg: #dff3f3;
+$ods-label-complete-bg: #006b3f;
+$ods-label-inactive-bg: #666;
+$ods-label-alert-bg: #c91b26;
+$ods-label-secondary-bg-one: #9c0f5f;
+$ods-label-secondary-bg-two: #60047a;

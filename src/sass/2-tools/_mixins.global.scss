@@ -4,3 +4,8 @@
     font-size: rem-calc(map-get(map-get(map-get($header-styles, 'medium'), $type), 'font-size'));
   }
 }
+
+@mixin ods-label-color($color, $text-color) {
+  background: $color;
+  color: $text-color;
+}

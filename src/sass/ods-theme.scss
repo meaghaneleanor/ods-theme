@@ -25,6 +25,7 @@ $assetsDir: '../assets' !default;
 
 @import "./6-components/_header.main";
 @import "./6-components/_footer.main";
+@import "./6-components/labels";
 
 .ods-button {
   @extend .button;
