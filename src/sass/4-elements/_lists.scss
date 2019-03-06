@@ -1,0 +1,132 @@
+// generic list styles
+ol,
+ul {
+    padding-left: 2em;
+    margin-bottom: 1.25rem;
+
+    ul {
+        list-style-type: circle;
+    }
+}
+
+p + ol,
+p + ul {
+    margin-top: -.75em;
+}
+
+// parentheses list styles
+.ods-list__bullet--parentheses {
+    counter-reset: a;
+    padding-left: 1.5rem;
+    
+    li {
+        list-style: none;
+        padding-left: 1rem;
+
+        &:before {
+            content: "(" counter(a,decimal) ") ";
+            counter-increment: a;
+            position: absolute;
+            margin-left: -3rem;
+            width: 2.5rem;
+            text-align: right;
+        }
+    }
+
+    //alpha bullets
+    &[type="a"] {
+        @extend .ods-list__bullet--parentheses;
+
+        li:before {
+            content: "(" counter(a,lower-alpha) ") ";
+        }
+    }
+
+    //roman numeral bullets
+    &[type="i"] {
+        @extend .ods-list__bullet--parentheses;
+
+        li:before {
+            content: "(" counter(a,lower-roman) ") "
+        }
+    }
+}
+
+.ods-list__bullet--parentheses-right {
+    @extend .ods-list__bullet--parentheses;
+
+    li:before {
+        content: counter(a,decimal) ") ";
+    }
+
+    //alpha bullets
+    &[type="a"] {
+        @extend .ods-list__bullet--parentheses;
+
+        li:before {
+            content: counter(a,lower-alpha) ") ";
+        }
+    }
+
+    //roman numeral bullets
+    &[type="i"] {
+        @extend .ods-list__bullet--parentheses;
+
+        li:before {
+            content: counter(a,lower-roman) ") "
+        }
+    }
+}
+
+// fancy list 
+.ods-list__bullet--fancy {
+    counter-reset: a;
+    margin-left: 5.5rem; 
+
+    li {
+        list-style-type: none;
+        min-height: 4rem;
+
+        &>:first-child {
+            margin-top: -4rem;
+        }
+
+        &:before {
+            background-color: #0087cb;
+            border-radius: 3rem;
+            color: #fff;
+            content: counter(a);
+            counter-increment: a;
+            display: block;
+            font-family: Raleway,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            height: 4.2rem;
+            line-height: 1;
+            margin-left: -5.5rem;
+            text-align: center;
+            width: 4.2rem;
+        }
+    }
+}
+
+// inline list
+.ods-list--inline {
+    list-style: none;
+    margin: 0 0 1.0625rem -1rem;
+    overflow: hidden;
+    padding: 0;
+    li {
+        display: block;
+        float: left;
+        list-style: none;
+        margin: 0 0 .625rem 1rem;
+    }
+}
+
+// lists with no bullet styles
+.ods-list--no-bullet {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
