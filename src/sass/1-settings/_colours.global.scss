@@ -1,10 +1,22 @@
-$ods-bg-header: #333;
-$ods-bg-footer: #ededed;
-
-$ods-border-footer: #d9d9d9;
-
-$ods-font-color: $body-font-color;
+//Settings
+$ods-darkest-gray: #222;
+$ods-dark-gray: #4d4d4d;
 $ods-medium-gray: #666;
 $ods-light-gray: #737373;
+$ods-lighter-gray: #d9d9d9;
+$ods-lightest-gray: #ededed;
+$ods-white: #fff;
 
+//Generics
+$ods-font-color: $body-font-color;
+
+//Elements
 $ods-link-color: $anchor-color;
+
+//Components
+$ods-bg-header: #333;
+
+$ods-bg-footer: #ededed;
+$ods-border-footer: #d9d9d9;
+
+$ods-table-tfoot-bg: #d1ddeb;
