@@ -130,3 +130,31 @@ p + ul {
     margin: 0;
     padding: 0;
 }
+
+//legal lists
+.ods-list--legal,
+.ods-list--legal ol {
+    counter-reset: item;
+    margin-left: 0;
+    margin-top: 0.625em;
+    > li {
+        display: table;
+        margin-bottom: 0.3em;
+        &:before {
+        content: counters(item, ".") ". ";
+        display: table-cell;
+        counter-increment: item;
+        padding-right: 0.6em;
+        }
+    }
+}
+
+.ods-list--legal-with-parentheses,
+.ods-list--legal-with-parentheses ol {
+    @extend .ods-list--legal;
+
+    & li:before,
+    & ol li:before {
+        content: "(" counters(item, ".") ") ";
+    }
+}
