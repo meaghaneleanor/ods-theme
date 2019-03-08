@@ -1,10 +1,24 @@
-$ods-bg-header: #333;
-$ods-bg-footer: #ededed;
-
-$ods-border-footer: #d9d9d9;
-
-$ods-font-color: $body-font-color;
+//Settings
 $ods-medium-gray: #666;
 $ods-light-gray: #737373;
+$ods-white: #fff;
 
+//Generics
+$ods-font-color: $body-font-color;
+
+$ods-form-input-font-color: rgba(0,0,0,.75);
+$ods-form-label-font-color: #4d4d4d;
+
+//Elements
 $ods-link-color: $anchor-color;
+
+//Components
+$ods-bg-header: #333;
+
+$ods-bg-footer: #ededed;
+$ods-border-footer: #d9d9d9;
+
+$ods-form-input-border-color: #ccc;
+$ods-form-input-box-shadow-color: rgba(0,0,0,.1);
+$ods-form-input-focus-bg: #FFF2C4; 
+$ods-form-fieldset-bg: hsla(0,0%,100%,.6);

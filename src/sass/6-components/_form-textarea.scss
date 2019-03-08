@@ -1,0 +1,6 @@
+.ods-form-textarea {
+    @extend .ods-form-input;
+
+    max-width: 100%;
+    min-height: 135px;
+}

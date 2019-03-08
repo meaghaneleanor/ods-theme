@@ -1,0 +1,13 @@
+.ods-form-fieldset {
+    background: $ods-form-fieldset-bg;
+    border: 1px solid $ods-form-input-border-color;
+    margin: 1.125rem 0;
+    padding: .5625rem 1.125rem;
+    page-break-inside: avoid;
+
+    &__legend {
+        color: $ods-form-label-font-color;
+        font-weight: 700;
+        margin: 0;
+    }
+}

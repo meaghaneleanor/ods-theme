@@ -1,0 +1,54 @@
+.ods-form-input:not([type="checkbox"]) {
+    background-color: $ods-white;
+    border: 1px solid $ods-form-input-border-color;
+    border-radius: 0;
+    box-shadow: inset 0 1px 2px $ods-form-input-box-shadow-color;
+    color: $ods-form-input-font-color;
+    // font-size: 1.1rem;
+    padding: .5rem;
+    margin: 0 0 1rem;
+    transition: border-color .15s linear, background .15s linear;
+    width: 100%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    &:focus {
+        border: 1px solid $ods-medium-gray;
+        background-color: $ods-form-input-focus-bg;
+    }
+
+    // placeholder styles have to be all on separate lines - they do not work if grouped together!!!
+    &::placeholder {
+        color: $ods-medium-gray;
+    }
+
+    ::-webkit-input-placeholder {
+        color: $ods-medium-gray;
+    }
+
+    :-moz-placeholder {
+        color: $ods-medium-gray;
+    }
+
+    ::-moz-placeholder {
+        color: $ods-medium-gray;
+    }
+
+    :-ms-input-placeholder {
+        color: $ods-medium-gray;
+    }
+}
+
+.ods-form-input__button--clear {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: .5rem;
+    bottom: .225rem;
+    padding: 0 .2rem 0 .4rem;
+    font-size: 1.2rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    /* need to add js functionality to get this to work properly */
+    // visibility: hidden;
+}
