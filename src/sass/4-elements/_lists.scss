@@ -92,9 +92,8 @@ p + ul {
         }
 
         &:before {
-            background-color: #0087cb;
             border-radius: 3rem;
-            color: #fff;
+            color: $ods-white;
             content: counter(a);
             counter-increment: a;
             display: block;
@@ -106,6 +105,49 @@ p + ul {
             margin-left: -5.5rem;
             text-align: center;
             width: 4.2rem;
+        }
+    }
+
+    /* bullet color variations */
+    &[bullet-color="ods-list__bullet--fancy-blue"] {
+        li:before {
+            background-color: $ods-fancy-list-bullet-blue;
+        }
+    } 
+
+    &[bullet-color="ods-list__bullet--fancy-yellow"] {
+        li:before {
+            background-color: $ods-fancy-list-bullet-yellow;
+        }
+    }
+
+    &[bullet-color="ods-list__bullet--fancy-orange"] {
+        li:before {
+            background-color: $ods-fancy-list-bullet-orange;
+        }
+    }
+
+    &[bullet-color="ods-list__bullet--fancy-red"] {
+        li:before {
+            background-color: $ods-fancy-list-bullet-red;
+        }
+    }
+
+    &[bullet-color="ods-list__bullet--fancy-magenta"] {
+        li:before {
+            background-color: $ods-fancy-list-bullet-magenta;
+        }
+    }
+
+    &[bullet-color="ods-list__bullet--fancy-purple"] {
+        li:before {
+            background-color: $ods-fancy-list-bullet-purple;
+        }
+    }
+
+    &[bullet-color="ods-list__bullet--fancy-green"] {
+        li:before {
+            background-color: $ods-fancy-list-bullet-green;
         }
     }
 }

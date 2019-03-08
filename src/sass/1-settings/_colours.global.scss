@@ -1,10 +1,24 @@
-$ods-bg-header: #333;
-$ods-bg-footer: #ededed;
-
-$ods-border-footer: #d9d9d9;
-
-$ods-font-color: $body-font-color;
+//Settings
 $ods-medium-gray: #666;
 $ods-light-gray: #737373;
+$ods-white: #fff;
 
+//Generics
+$ods-font-color: $body-font-color;
+
+//Elements
 $ods-link-color: $anchor-color;
+
+//Components
+$ods-bg-header: #333;
+
+$ods-border-footer: #d9d9d9;
+$ods-bg-footer: #ededed;
+
+$ods-fancy-list-bullet-blue: #0087cb;
+$ods-fancy-list-bullet-yellow: #FFC300;
+$ods-fancy-list-bullet-orange: #F2671F;
+$ods-fancy-list-bullet-red: #C91B26;
+$ods-fancy-list-bullet-magenta: #9C0F5F;
+$ods-fancy-list-bullet-purple: #60047A;
+$ods-fancy-list-bullet-green: #008B52;
