@@ -9,27 +9,24 @@ $assetsDir: '../assets' !default;
 
 @import 'node_modules/foundation-sites/scss/foundation';
 
-@import "./1-settings/_foundation.settings";
-@import "./1-settings/_colours.global";
+@import "./1-settings/foundation.settings";
+@import "./1-settings/colours.global";
 
-@import "./2-tools/_foundation.includes";
-@import "./2-tools/_mixins.global";
+@import "./2-tools/foundation.includes";
+@import "./2-tools/mixins.global";
 
-@import "./3-generics/_fonts";
+@import "./3-generics/fonts";
 
-@import "./4-elements/_elements";
+@import "./4-elements/elements";
 
-@import "./5-objects/_icons";
-@import "./5-objects/_layout";
-@import "./5-objects/_visibility";
+@import "./5-objects/icons";
+@import "./5-objects/layout";
+@import "./5-objects/visibility";
 
 @import "./6-components/_header.main";
 @import "./6-components/_footer.main";
+@import "./6-components/button";
 @import "./6-components/labels";
-
-.ods-button {
-  @extend .button;
-}
 
 .ods-list--no-bullet {
   list-style: none;

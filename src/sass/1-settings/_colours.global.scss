@@ -14,6 +14,7 @@ $ods-label-font-color-light: #fff;
 /* ---------------
     Elements       
 --------------- */
+$ods-abbreviation-color: #999;
 $ods-link-color: $anchor-color;
 
 /* ---------------
@@ -25,6 +26,18 @@ $ods-bg-header: #333;
 /* footer */
 $ods-bg-footer: #ededed;
 $ods-border-footer: #d9d9d9;
+
+/* buttons */
+$ods-button-primary: #0071a9;
+$ods-button-primary-hover: #0083c4;
+$ods-button-secondary: #d1ddeb;
+$ods-button-secondary-hover: #b2c6de;
+$ods-button-alert: #9d2f00;
+$ods-button-alert-hover: #b93700;
+$ods-button-box-shadow-color: #666;
+$ods-button-primary-text-color: white;
+$ods-button-secondary-text-color: #333;
+$ods-button-disabled-color: #737373;
 
 /* labels */
 $ods-label-default-bg: #ededed;

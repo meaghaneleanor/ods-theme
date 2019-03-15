@@ -5,7 +5,20 @@
   }
 }
 
-@mixin ods-label-color($bg-olor, $text-color) {
+@mixin ods-button-color($bg-color: $ods-button-primary, $hover-bg-color: $ods-button-primary-hover, $text-color: $ods-button-primary-text-color) {
+  background: $bg-color;
+  border: 0 solid $hover-bg-color;
+  color: $text-color;
+
+  &:active,
+  &:focus,
+  &:hover {
+      background: $hover-bg-color;
+      color: $text-color;
+  }
+}
+
+@mixin ods-label-color($bg-color, $text-color) {
   background: $bg-color;
   color: $text-color;
 }

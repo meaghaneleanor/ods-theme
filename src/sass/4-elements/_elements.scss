@@ -79,5 +79,11 @@ input[type="week"],
 textarea {
   border-radius: 0;
   border: none;
+  border-radius: 0;
   font-size: 1.1rem;
+}
+
+abbr, 
+abbr[title] {
+  border-bottom: 2px dotted $ods-abbreviation-color;
 }
