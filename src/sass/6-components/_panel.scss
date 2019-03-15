@@ -45,14 +45,13 @@
 }
 
 .ods-panel--dark a,
-.ods-panel--dark a:visited, 
-.ods-panel--dark a:focus,
-.ods-panel--dark a abbr,
-.ods-panel--dark a abbr[title] {
+.ods-panel--dark > abbr,
+.ods-panel--dark >  abbr[title] {
     color: $ods-panel-dark-link-color;
     text-decoration: underline;
 
-    &:hover {
+    &:hover,
+    &:focus {   
         color: $ods-panel-dark-font-color;
     }
 }
