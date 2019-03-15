@@ -5,15 +5,15 @@
   }
 }
 
-@mixin ods-button-color($color1, $color2, $text-color) {
-  background: $color1;
-  border: 0 solid $color2;
+@mixin ods-button-color($bg-color: $ods-button-primary, $hover-bg-color: $ods-button-primary-hover, $text-color: $ods-button-primary-text-color) {
+  background: $bg-color;
+  border: 0 solid $hover-bg-color;
   color: $text-color;
 
   &:active,
   &:focus,
   &:hover {
-      background: $color2;
+      background: $hover-bg-color;
       color: $text-color;
   }
 }
