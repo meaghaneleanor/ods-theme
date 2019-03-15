@@ -3,52 +3,46 @@
     border-radius: 3px;
     display: inline-block;
     font-size: .9375rem;
-    font-weight: 400;
     line-height: 1;
     margin: 0 .3125rem .3125rem 0;
     padding: .25rem .5rem;
     position: relative;
     text-align: center;
-    text-decoration: none;
     white-space: nowrap;
+}
 
-    &--updated {
-        @include ods-label-color($ods-label-updated-bg, $ods-label-font-color-dark);
-    }
+.ods-label--status-updated {
+    @include ods-label-color($ods-label-status-updated-bg, $ods-label-font-color-dark);
+}
 
-    &--open {
-        @include ods-label-color($ods-label-open-bg, $ods-label-font-color-dark);
-    }
+.ods-label--status-open {
+    @include ods-label-color($ods-label-status-open-bg, $ods-label-font-color-dark);
+}
 
-    &--closed {
-        @include ods-label-color($ods-label-closed-bg, $ods-label-font-color-dark);
-    }
+.ods-label--status-closed {
+    @include ods-label-color($ods-label-status-closed-bg, $ods-label-font-color-dark);
+}
 
-    &--under-review {
-        @include ods-label-color($ods-label-under-review-bg, $ods-label-font-color-dark);
-    }
+.ods-label--status-under-review {
+    @include ods-label-color($ods-label-status-under-review-bg, $ods-label-font-color-dark);
+}
 
-    &--upcoming {
-        @include ods-label-color($ods-label-upcoming-bg, $ods-label-font-color-dark);
-    }
+.ods-label--status-upcoming {
+    @include ods-label-color($ods-label-status-upcoming-bg, $ods-label-font-color-dark);
+}
 
-    &--complete {
-        @include ods-label-color($ods-label-complete-bg, $ods-label-font-color-light);
-    }
+.ods-label--status-complete {
+    @include ods-label-color($ods-label-status-complete-bg, $ods-label-font-color-light);
+}
 
-    &--inactive {
-        @include ods-label-color($ods-label-inactive-bg, $ods-label-font-color-light);
-    }
+.ods-label--status-implementing {
+    @include ods-label-color($ods-label-status-implementing-bg, $ods-label-font-color-light);
+}
 
-    &--alert {
-        @include ods-label-color($ods-label-alert-bg, $ods-label-font-color-light);
-    }
+.ods-label--status-inactive {
+    @include ods-label-color($ods-label-status-inactive-bg, $ods-label-font-color-light);
+}
 
-    &--secondary-bg-one {
-        @include ods-label-color($ods-label-secondary-bg-one, $ods-label-font-color-light);
-    }
-
-    &--secondary-bg-two {
-        @include ods-label-color($ods-label-secondary-bg-two, $ods-label-font-color-light);
-    }
+.ods-label--status-alert {
+    @include ods-label-color($ods-label-status-alert-bg, $ods-label-font-color-light);
 }
