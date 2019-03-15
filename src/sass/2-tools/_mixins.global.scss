@@ -5,7 +5,7 @@
   }
 }
 
-@mixin ods-label-color($color, $text-color) {
-  background: $color;
+@mixin ods-label-color($bg-olor, $text-color) {
+  background: $bg-color;
   color: $text-color;
 }
