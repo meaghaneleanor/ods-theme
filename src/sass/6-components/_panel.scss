@@ -1,68 +1,70 @@
 .ods-panel {
     border-color: $ods-panel-border;
     border-style: solid;
-    border-width: 0 0 0 .9375rem;
+    border-width: 0 0 0 $ods-standard-component-padding;
     color: $ods-panel-font-color;
     margin-bottom: 1.25rem;
-    padding: .9375rem 2rem .9375rem .9375rem;
+    padding: $ods-standard-component-padding;
+    padding-right: 2.5rem;
     position: relative;
+}
+
+.ods-panel p:last-child {
+    margin: 0;
+}
+
+.ods-panel__close-button {
+    font-size: rem-calc($ods-standard-component-padding * 2);
+    line-height: 1;
+    position: absolute;
+    right: $ods-standard-component-padding;
+    top: 10%;
+}
+
+.ods-panel__image {
+    margin: 0 0 1em 1.5em;
+}
+
+/* Panel color variations */
+.ods-panel--aside {
+    background: $ods-panel-aside-bg;
+}
+
+.ods-panel--callout {
+    background: $ods-panel-callout-bg;
+}
+
+.ods-panel--dark {
+    background: $ods-panel-dark-bg;
+    color: $ods-panel-dark-font-color;
+}
+
+.ods-panel--dark abbr,
+.ods-panel--dark abbr[title] {
+    border-bottom: 2px dotted $ods-panel-dark-link-color;
+}
+
+.ods-panel--dark a,
+.ods-panel--dark a:visited, 
+.ods-panel--dark a:focus,
+.ods-panel--dark a abbr,
+.ods-panel--dark a abbr[title] {
+    color: $ods-panel-dark-link-color;
+    text-decoration: underline;
+
+    &:hover {
+        color: $ods-panel-dark-font-color;
+    }
+}
+
+.ods-panel--error {
+    background: $ods-panel-error-bg;
+}
     
-    p:last-child {
-        margin: 0;
-    }
-
-    &__close-button {
-        font-size: 1.875rem;
-        line-height: .9;
-        padding: 0 6px 6px;
-        position: absolute;
-        right: .25em;
-        top: 30%;
-    }
-
-    &__image--right {
-        clear: right;
-        float: right;
-        margin: 0 0 1em 1.5em;
-    }
-
-        //panel variations
-        &--aside {
-            background: $ods-panel-aside-bg;
-        }
-
-        &--callout {
-            background: $ods-panel-callout-bg;
-        }
-
-        &--dark {
-            background: $ods-panel-dark-bg;
-            color: $ods-panel-dark-font-color;
-
-            a, a:visited, a:focus,
-            abbr, abbr[title] {
-                color: $ods-panel-dark-link-color;
-                text-decoration: underline;
-
-                &:hover {
-                    color: $ods-panel-dark-font-color;
-                }
-            }
-
-            abbr, abbr[title] {
-               border-bottom: 2px dotted $ods-panel-dark-link-color; 
-            }
-        }
-
-        &--error {
-            background: $ods-panel-error-bg;
-        }
-        
-        &--success {
-            background: $ods-panel-success-bg;
-        }
-        
-        &--warning {
-            background: $ods-panel-warning-bg;
-        }
+.ods-panel--success {
+    background: $ods-panel-success-bg;
+}
+    
+.ods-panel--warning {
+    background: $ods-panel-warning-bg;
 }
