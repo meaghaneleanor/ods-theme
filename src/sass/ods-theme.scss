@@ -26,13 +26,10 @@ $assetsDir: '../assets' !default;
 
 @import "./6-components/header.main";
 @import "./6-components/footer.main";
+@import "./6-components/button";
 @import "./6-components/panel";
 
 @import "./7-overrides/layout.float";
-
-.ods-button {
-  @extend .button;
-}
 
 .ods-list--no-bullet {
   list-style: none;
