@@ -1,20 +1,33 @@
-//Settings
+/* ---------------
+    Settings       
+--------------- */
 $ods-medium-gray: #666;
 $ods-light-gray: #737373;
 
-//Generics
+/* ---------------
+    Generics       
+--------------- */
 $ods-font-color: $body-font-color;
+$ods-label-font-color-dark: #4d4d4d;
+$ods-label-font-color-light: #fff;
 
-//Elements
+/* ---------------
+    Elements       
+--------------- */
 $ods-abbreviation-color: #999;
 $ods-link-color: $anchor-color;
 
-//Components
+/* ---------------
+    Components       
+--------------- */
+/* header */
 $ods-bg-header: #333;
 
+/* footer */
 $ods-bg-footer: #ededed;
 $ods-border-footer: #d9d9d9;
 
+/* buttons */
 $ods-button-primary: #0071a9;
 $ods-button-primary-hover: #0083c4;
 $ods-button-secondary: #d1ddeb;
@@ -25,3 +38,15 @@ $ods-button-box-shadow-color: #666;
 $ods-button-primary-text-color: white;
 $ods-button-secondary-text-color: #333;
 $ods-button-disabled-color: #737373;
+
+/* labels */
+$ods-label-default-bg: #ededed;
+$ods-label-status-updated-bg: #fafad2;
+$ods-label-status-open-bg: #e6fad2;
+$ods-label-status-closed-bg: #fad2d2;
+$ods-label-status-under-review-bg: #d2d1eb;
+$ods-label-status-upcoming-bg: #dff3f3;
+$ods-label-status-complete-bg: #006b3f;
+$ods-label-status-implementing-bg: #8138b3;
+$ods-label-status-inactive-bg: #666;
+$ods-label-status-alert-bg: #c91b26;

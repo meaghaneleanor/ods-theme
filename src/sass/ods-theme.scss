@@ -23,10 +23,10 @@ $assetsDir: '../assets' !default;
 @import "./5-objects/layout";
 @import "./5-objects/visibility";
 
+@import "./6-components/_header.main";
+@import "./6-components/_footer.main";
 @import "./6-components/button";
-@import "./6-components/header.main";
-@import "./6-components/footer.main";
-
+@import "./6-components/labels";
 
 .ods-list--no-bullet {
   list-style: none;
