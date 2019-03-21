@@ -17,3 +17,8 @@
       color: $text-color;
   }
 }
+
+@mixin ods-label-color($bg-color, $text-color) {
+  background: $bg-color;
+  color: $text-color;
+}

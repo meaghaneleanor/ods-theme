@@ -11,6 +11,8 @@ $ods-font-color: $body-font-color;
 $ods-panel-font-color: #333;
 $ods-panel-dark-font-color: #fff;
 $ods-panel-dark-link-color: #d1ddeb;
+$ods-label-font-color-dark: #4d4d4d;
+$ods-label-font-color-light: #fff;
 
 /* ---------------
     Elements       
@@ -48,3 +50,15 @@ $ods-panel-warning-bg: #fafad2;
 $ods-panel-success-bg: #e6fad2;
 $ods-panel-error-bg: #fad2d2;
 $ods-panel-dark-bg: #4d4d4d;
+
+/* labels */
+$ods-label-default-bg: #ededed;
+$ods-label-status-updated-bg: #fafad2;
+$ods-label-status-open-bg: #e6fad2;
+$ods-label-status-closed-bg: #fad2d2;
+$ods-label-status-under-review-bg: #d2d1eb;
+$ods-label-status-upcoming-bg: #dff3f3;
+$ods-label-status-complete-bg: #006b3f;
+$ods-label-status-implementing-bg: #8138b3;
+$ods-label-status-inactive-bg: #666;
+$ods-label-status-alert-bg: #c91b26;
