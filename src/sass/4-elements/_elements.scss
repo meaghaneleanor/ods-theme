@@ -63,4 +63,17 @@ input[type="tel"], input[type="text"], input[type="time"], input[type="url"],
 input[type="week"], textarea {
   border-radius: 0;
   font-size: 1.1rem;
+  padding: .5rem;
+  margin: 0 0 1rem;
+}
+
+fieldset {
+  margin: 1.125rem 0;
+  padding: .5625rem 1.125rem;
+  page-break-inside: avoid;
+}
+
+legend,
+label {
+  margin: 0;
 }

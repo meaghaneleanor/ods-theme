@@ -2,34 +2,43 @@
     color: $ods-form-label-font-color;
     cursor: pointer;
     font-size: inherit;
-    font-weight: inherit;
     line-height: 1.5;
-    margin-bottom: 0;
+}
 
-    &[type="checkbox"] + label,
-    &[type="radio"] + label {
-        display: inline-block;
-        margin-left: .5rem;
-        margin-right: 1rem;
-        margin-bottom: 0;
-        vertical-align: baseline;
-    }
+/* 
+    These  styles are only applied to labels whose sibling element
+    is a checkbox/radio input. This is to allow for labels to sit 
+    beside rather than above the inputs.
+*/ 
+.ods-form-label[type="checkbox"] + label,
+.ods-form-label[type="radio"] + label {
+    display: inline-block;
+    margin-left: .5rem;
+    margin-right: 1rem;
+}
 
-    & > [type='checkbox'], 
-    & > [type='radio'] {
-        margin-right: 0rem;
-    }
+/*
+    These styles are only applied to checkbox/radio inputs that
+    are children of labels. There should only be additional
+    margin added to these inputs if their parent is a label.
+*/
+.ods-form-label > input[type="checkbox"],
+.ods-form-label > input[type="radio"] {
+    margin-right: 0.5rem;
+}
 
-    &--required {
-        font-weight: 700;
-    }
+/* -------------------
+    Label Variations      
+------------------- */
+.ods-form-label--required {
+    font-weight: 700;
+}
 
-    &--has-inline-input {
-        display: block;
-        margin: 0 0 .5rem 1.5rem;
+.ods-form-label--has-inline-input {
+    display: block;
+    margin: 0 0 .5rem 1.5rem;
+}
 
-        input {
-            margin: 0 .25rem 0 -1.5rem;
-        }
-    }
+.ods-form-label--has-inline-input input {
+    margin: 0 .25rem 0 -1.5rem;
 }
