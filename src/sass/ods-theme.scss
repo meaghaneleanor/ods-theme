@@ -11,6 +11,7 @@ $assetsDir: '../assets' !default;
 
 @import "./1-settings/foundation.settings";
 @import "./1-settings/colours.global";
+@import "./1-settings/spacing.global";
 
 @import "./2-tools/foundation.includes";
 @import "./2-tools/mixins.global";
@@ -23,10 +24,13 @@ $assetsDir: '../assets' !default;
 @import "./5-objects/layout";
 @import "./5-objects/visibility";
 
-@import "./6-components/_header.main";
-@import "./6-components/_footer.main";
+@import "./6-components/header.main";
+@import "./6-components/footer.main";
 @import "./6-components/button";
+@import "./6-components/panel";
 @import "./6-components/labels";
+
+@import "./7-overrides/layout.float";
 
 .ods-list--no-bullet {
   list-style: none;
@@ -40,8 +44,10 @@ $assetsDir: '../assets' !default;
   }
 }
 
-
-
 .ods-margin--top-double {
   margin-top: 2rem;
+}
+
+.ods-padding--bottom-double {
+  padding-bottom: 2rem;
 }
