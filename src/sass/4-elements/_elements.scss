@@ -58,8 +58,9 @@ h4 abbr {
   color: $ods-light-gray;
 }
 
-small {
-  font-size: 0.8rem;
+small,
+.small {
+  font-size: .9375rem;
 }
 
 input[type="checkbox"], 
