@@ -11,12 +11,3 @@
         border: 1px solid $ods-medium-gray;
     }
 }
-
-/*
-    This targets an error panel/message for a required input field.
-    This is to allow for a smaller panel to display error messages
-    in forms. 
-*/
-.ods-form-textarea + .ods-panel--error {
-    padding: .375rem;
-}

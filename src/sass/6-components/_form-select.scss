@@ -12,12 +12,3 @@
         outline: 5px auto -webkit-focus-ring-color;
     }
 }
-
-/*
-    This targets an error panel/message for a required input field.
-    This is to allow for a smaller panel to display error messages
-    in forms. 
-*/
-.ods-form-select + .ods-panel--error {
-    padding: .375rem;
-}

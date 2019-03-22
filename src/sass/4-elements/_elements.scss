@@ -96,6 +96,13 @@ label {
   margin: 0;
 }
 
+input:required,
+textarea:required,
+fieldset:required,
+select:required {
+  margin: 0;
+}
+
 abbr, 
 abbr[title] {
   border-bottom: 2px dotted $ods-abbreviation-color;

@@ -7,12 +7,3 @@
     color: $ods-font-color-medium;
     font-weight: 700;
 }
-
-/*
-    This targets an error panel/message for a required input field.
-    This is to allow for a smaller panel to display error messages
-    in forms. 
-*/
-.ods-form-fieldset + .ods-panel--error {
-    padding: .375rem;
-}

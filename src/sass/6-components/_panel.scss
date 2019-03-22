@@ -26,6 +26,18 @@
     margin: 0 0 1em 1.5em;
 }
 
+/*
+    This targets an error panel/message for a required input field.
+    This is to allow for a smaller panel to display error messages
+    in forms. 
+*/
+input:required + .ods-panel--error,
+textarea:required + .ods-panel-error,
+fieldset:required + .ods-panel-error,
+select:required + .ods-panel-error {
+    padding: .375rem;
+}
+
 /* Panel color variations */
 .ods-panel--aside {
     background: $ods-panel-aside-bg;
