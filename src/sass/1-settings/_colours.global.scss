@@ -8,11 +8,12 @@ $ods-light-gray: #737373;
     Generics       
 --------------- */
 $ods-font-color: $body-font-color;
-$ods-panel-font-color: #333;
-$ods-panel-dark-font-color: #fff;
-$ods-panel-dark-link-color: #d1ddeb;
-$ods-label-font-color-dark: #4d4d4d;
-$ods-label-font-color-light: #fff;
+$ods-font-color-dark: #333;
+$ods-font-color-medium: #4d4d4d;
+$ods-font-color-light: #fff;
+
+$ods-panel-dark--font-color: #fff;
+$ods-panel-dark--link-color: #d1ddeb;
 
 /* ---------------
     Elements       
@@ -24,26 +25,24 @@ $ods-link-color: $anchor-color;
     Components       
 --------------- */
 /* header */
-$ods-bg-header: #333;
+$ods-header-bg: #333;
 
 /* footer */
-$ods-bg-footer: #ededed;
-$ods-border-footer: #d9d9d9;
+$ods-footer-bg: #ededed;
+$ods-footer-border-color: #d9d9d9;
 
 /* buttons */
-$ods-button-primary: #0071a9;
-$ods-button-primary-hover: #0083c4;
-$ods-button-secondary: #d1ddeb;
-$ods-button-secondary-hover: #b2c6de;
-$ods-button-alert: #9d2f00;
-$ods-button-alert-hover: #b93700;
 $ods-button-box-shadow-color: #666;
-$ods-button-primary-text-color: white;
-$ods-button-secondary-text-color: #333;
-$ods-button-disabled-color: #737373;
+$ods-button-primary-bg: #0071a9;
+$ods-button-primary--hover-bg: #0083c4;
+$ods-button-secondary-bg: #d1ddeb;
+$ods-button-secondary--hover-bg: #b2c6de;
+$ods-button-alert-bg: #9d2f00;
+$ods-button-alert--hover-bg: #b93700;
+$ods-button-disabled-bg: #737373;
 
 /* panels */
-$ods-panel-border: rgba(0,0,0,.1);
+$ods-panel-border-color: rgba(0,0,0,.1);
 $ods-panel-aside-bg: #f5f5f5;
 $ods-panel-callout-bg: #dff3f3;
 $ods-panel-warning-bg: #fafad2;

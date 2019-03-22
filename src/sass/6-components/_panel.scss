@@ -1,8 +1,8 @@
 .ods-panel {
-    border-color: $ods-panel-border;
+    border-color: $ods-panel-border-color;
     border-style: solid;
     border-width: 0 0 0 $ods-standard-component-padding;
-    color: $ods-panel-font-color;
+    color: $ods-font-color-dark;
     margin-bottom: 1.25rem;
     padding: $ods-standard-component-padding;
     padding-right: 2.5rem;
@@ -36,23 +36,23 @@
 
 .ods-panel--dark {
     background: $ods-panel-dark-bg;
-    color: $ods-panel-dark-font-color;
+    color: $ods-panel-dark--font-color;
 }
 
 .ods-panel--dark abbr,
 .ods-panel--dark abbr[title] {
-    border-bottom: 2px dotted $ods-panel-dark-link-color;
+    border-bottom: 2px dotted $ods-panel-dark--link-color;
 }
 
 .ods-panel--dark a,
 .ods-panel--dark > abbr,
 .ods-panel--dark >  abbr[title] {
-    color: $ods-panel-dark-link-color;
+    color: $ods-panel-dark--link-color;
     text-decoration: underline;
 
     &:hover,
     &:focus {   
-        color: $ods-panel-dark-font-color;
+        color: $ods-panel-dark--font-color;
     }
 }
 

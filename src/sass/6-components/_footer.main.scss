@@ -1,8 +1,8 @@
 .ods-main-footer {
-  background: $ods-bg-footer;
+  background: $ods-footer-bg;
   margin-top: 1rem;
   padding: 2rem 0 1.5rem;
-  border-top: 1px solid $ods-border-footer;
+  border-top: 1px solid $ods-footer-border-color;
   a {
     color: $ods-font-color;
   }
@@ -44,7 +44,7 @@
 }
 
 .ods-main-footer__swoosh-bg {
-  background: url('#{$assetsDir}/footer-swoosh-bg.png') $ods-bg-footer repeat-x top;
+  background: url('#{$assetsDir}/footer-swoosh-bg.png') $ods-footer-bg repeat-x top;
   width: 100%;
   height: 96px;
 
@@ -58,5 +58,5 @@
   height: 96px;
   position: absolute;
   right: 0;
-  background: url('#{$assetsDir}/footer-swoosh-right.png') $ods-bg-footer no-repeat top right;
+  background: url('#{$assetsDir}/footer-swoosh-right.png') $ods-footer-bg no-repeat top right;
 }
