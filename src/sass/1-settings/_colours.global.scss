@@ -1,4 +1,6 @@
-//Settings
+/* ---------------
+    Settings       
+--------------- */
 $ods-darkest-gray: #222;
 $ods-dark-gray: #4d4d4d;
 $ods-medium-gray: #666;
@@ -7,16 +9,26 @@ $ods-lighter-gray: #d9d9d9;
 $ods-lightest-gray: #ededed;
 $ods-white: #fff;
 
-//Generics
+/* ---------------
+    Generics       
+--------------- */
 $ods-font-color: $body-font-color;
 
-//Elements
+/* ---------------
+    Elements       
+--------------- */
 $ods-link-color: $anchor-color;
 
-//Components
+/* ---------------
+    Components       
+--------------- */
+/* header */
 $ods-bg-header: #333;
 
+/* footer */
 $ods-bg-footer: #ededed;
 $ods-border-footer: #d9d9d9;
 
+/* table */
 $ods-table-tfoot-bg: #d1ddeb;
+$ods-table-stripe-bg: #efefef;

@@ -1,114 +1,90 @@
-//Generic table styles
-table,
 .ods-table {
-    border: 0 none transparent;
-    border-spacing: 0;
-    border-collapse: collapse;
-    border-bottom: 4px solid $ods-lightest-gray;
-    margin-bottom: 1.25rem;
-    table-layout: auto;
-
-    thead th a {
-        color: $ods-white;
-    }
-
-    th, td {
-        vertical-align: top;
-    }
-
-    tfoot {
-        background: $ods-table-tfoot-bg;
-
-        tr th {
-            font-size: .875rem;
-        }
-
-        tr td {
-            font-weight: 700;
-        }
-    }
+    border-bottom-color: $ods-lightest-gray;
 }
 
-//Table Modifiers
+.ods-table thead {
+    background: $ods-medium-gray;
+}
+
+.ods-table thead a {
+    color: $ods-white;
+    text-decoration: underline;
+}
+
+.ods-table thead th {
+    color: $ods-white;
+    display: table-cell;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.5625rem;
+    padding: .5rem .625rem .625rem;
+    text-align: left;
+}
+
+.ods-table th,
+.ods-table td {
+    color: $ods-darkest-gray;
+}
+
+.ods-table tfoot {
+    background: $ods-table-tfoot-bg;
+    font-weight: 700;
+}
+
+.ods-table tfoot th {
+    font-size: .875rem;
+}
+
+.ods-table tfoot td {
+    font-weight: 700;
+}
+
+.ods-table caption {
+    background: $ods-lightest-gray;
+    color: $ods-dark-gray;
+    font-weight: 700;
+}
+
+/* -------------------
+    Table Modifiers      
+-------------------- */
 .ods-table--full-width {
     width: 100%;
     overflow-x: scroll;
     margin-bottom: 1.25rem;
 }
 
-//Table Style Variations
-/*Default table*/
-.ods-table--default {
-    caption {
-        background: $ods-lightest-gray;
-        color: $ods-dark-gray;
-        font-size: 1rem;
-        font-weight: 700;
-        padding: .5rem;
-        text-align: center;
-    }
-
-    thead {
-        background: $ods-medium-gray;
-        
-        tr {
-            th {
-                color: $ods-white;
-                display: table-cell;
-                font-size: .875rem;
-                font-weight: 700;
-                line-height: 1.5625rem;
-                padding: .5rem .625rem .625rem;
-                text-align: left;
-            }
-        }
-    }
-
-    tr {
-        &:nth-of-type(2n) {
-            background: $ods-lightest-gray;
-        }
-
-        th, td {
-            color: $ods-darkest-gray;
-            font-size: 1rem;
-            padding: .5625rem .625rem;
-            text-align: left;
-        }
-    }
+/* -------------------
+    Table Variations      
+-------------------- */
+/* Table with stripes */
+.ods-table--with-stripes tr:nth-of-type(2n) {
+    background: $ods-table-stripe-bg;
 }
 
-/*Table with no stripes*/
-.ods-table--no-stripes {
-    @extend .ods-table--default;
-
-    tr {
-        &:nth-of-type(2n),
-        th[scope="row"],
-        td {
-            background: $ods-white;
-            border-bottom: 1px dotted $ods-lighter-gray;
-        }
-    }
+/* Table without stripes */
+.ods-table--no-stripes th[scope="row"],
+.ods-table--no-stripes td {
+    background: $ods-white;
+    border-bottom: 1px dotted $ods-lighter-gray;
 }
 
-/*Table with numeric values*/
-.ods-table--numeric {
-    @extend .ods-table--default;
-    
-    thead tr th {
-        &:not(.ods-table__table-heading--non-numeric) {
-            text-align: right;
-        }
-    }
+/* Table with numeric values */
+.ods-table--numeric tr:nth-of-type(2n) {
+    background: $ods-table-stripe-bg;
+}
 
-    tbody td,
-    tfoot td {
-        font-family: Consolas,Liberation Mono,Courier,monospace;
-        font-size: .85rem;
+.ods-table--numeric thead th {
+    text-align: right;
+}
 
-        &:not(.ods-table__table-heading--non-numeric) {
-            text-align: right;
-        }
-    }
+.ods-table--numeric thead .ods-table__table-heading--non-numeric {
+    text-align: left;
+}
+
+.ods-table--numeric tbody td,
+.ods-table--numeric tfoot td {
+    font-family: Consolas,Liberation Mono,Courier,monospace;
+    font-size: .85rem;
+    text-align: right;
 }

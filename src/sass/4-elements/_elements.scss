@@ -65,3 +65,24 @@ input[type="week"], textarea {
   border: none;
   font-size: 1.1rem;
 }
+
+table {
+  border: 0 none transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 4px solid;
+  margin-bottom: 1.25rem;
+  table-layout: auto;
+}
+
+th,
+td {
+  vertical-align: top;
+  padding: .5625rem .625rem;
+  text-align: left;
+}
+
+table caption {
+  padding: .5rem;
+  text-align: center;
+}
