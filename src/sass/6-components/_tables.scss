@@ -7,8 +7,12 @@
 }
 
 .ods-table thead a {
-    color: $ods-white;
+    color: lighten($ods-table--link-color, 5%);
     text-decoration: underline;
+
+    &:hover {
+        color: $ods-font-color-light;
+    }
 }
 
 .ods-table thead th {
