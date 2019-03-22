@@ -29,6 +29,11 @@ $assetsDir: '../assets' !default;
 @import "./6-components/button";
 @import "./6-components/panel";
 @import "./6-components/labels";
+@import "./6-components/tables";
+
+.ods-button {
+  @extend .button;
+}
 
 @import "./7-overrides/layout.float";
 

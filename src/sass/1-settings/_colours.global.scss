@@ -1,19 +1,26 @@
 /* ---------------
     Settings       
 --------------- */
+$ods-darkest-gray: #222;
+$ods-dark-gray: #4d4d4d;
 $ods-medium-gray: #666;
 $ods-light-gray: #737373;
+$ods-lighter-gray: #d9d9d9;
+$ods-lightest-gray: #ededed;
+$ods-white: #fff;
 
 /* ---------------
     Generics       
 --------------- */
 $ods-font-color: $body-font-color;
+$ods-font-color-light: #fff;
 $ods-font-color-dark: #333;
 $ods-font-color-medium: #4d4d4d;
-$ods-font-color-light: #fff;
 
 $ods-panel-dark--font-color: #fff;
 $ods-panel-dark--link-color: #d1ddeb;
+
+$ods-table--link-color: #d1ddeb;
 
 /* ---------------
     Elements       
@@ -61,3 +68,9 @@ $ods-label-status-complete-bg: #006b3f;
 $ods-label-status-implementing-bg: #8138b3;
 $ods-label-status-inactive-bg: #666;
 $ods-label-status-alert-bg: #c91b26;
+
+/* table */
+$ods-table-tfoot-bg: #d1ddeb;
+$ods-table-stripe-bg: #efefef;
+$ods-label-font-color-dark: #4d4d4d;
+$ods-label-font-color-light: #fff;
