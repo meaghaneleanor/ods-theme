@@ -9,22 +9,26 @@ $assetsDir: '../assets' !default;
 
 @import 'node_modules/foundation-sites/scss/foundation';
 
-@import "./1-settings/_foundation.settings";
-@import "./1-settings/_colours.global";
+@import "./1-settings/foundation.settings";
+@import "./1-settings/colours.global";
+@import "./1-settings/spacing.global";
 
-@import "./2-tools/_foundation.includes";
-@import "./2-tools/_mixins.global";
+@import "./2-tools/foundation.includes";
+@import "./2-tools/mixins.global";
 
-@import "./3-generics/_fonts";
+@import "./3-generics/fonts";
 
-@import "./4-elements/_elements";
+@import "./4-elements/elements";
 
-@import "./5-objects/_icons";
-@import "./5-objects/_layout";
-@import "./5-objects/_visibility";
+@import "./5-objects/icons";
+@import "./5-objects/layout";
+@import "./5-objects/visibility";
 
-@import "./6-components/_header.main";
-@import "./6-components/_footer.main";
+@import "./6-components/header.main";
+@import "./6-components/footer.main";
+@import "./6-components/button";
+@import "./6-components/panel";
+@import "./6-components/labels";
 @import "./6-components/form";
 @import "./6-components/form-label";
 @import "./6-components/form-input";
@@ -32,9 +36,7 @@ $assetsDir: '../assets' !default;
 @import "./6-components/form-textarea";
 @import "./6-components/form-fieldset";
 
-.ods-button {
-  @extend .button;
-}
+@import "./7-overrides/layout.float";
 
 .ods-list--no-bullet {
   list-style: none;
@@ -48,8 +50,10 @@ $assetsDir: '../assets' !default;
   }
 }
 
-
-
 .ods-margin--top-double {
   margin-top: 2rem;
+}
+
+.ods-padding--bottom-double {
+  padding-bottom: 2rem;
 }

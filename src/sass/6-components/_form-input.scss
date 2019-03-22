@@ -12,7 +12,7 @@
 
     &:focus {
         border: 1px solid $ods-medium-gray;
-        background-color: $ods-form-input-focus-bg;
+        background-color: $ods-form-input--focus-bg;
     }
 
     // placeholder styles have to be all on separate lines - they do not work if grouped together!
@@ -39,6 +39,15 @@
         color: $ods-medium-gray;
         font-size: .85rem;
     }
+}
+
+/*
+    This targets an error panel/message for a required input field.
+    This is to allow for a smaller panel to display error messages
+    in forms. 
+*/
+.ods-form-input + .ods-panel--error {
+    padding: .375rem;
 }
 
 .ods-form-input__button--clear {

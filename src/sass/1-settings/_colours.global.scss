@@ -1,25 +1,74 @@
-//Settings
+/* ---------------
+    Settings       
+--------------- */
 $ods-medium-gray: #666;
 $ods-light-gray: #737373;
 $ods-white: #fff;
 
-//Generics
+/* ---------------
+    Generics       
+--------------- */
 $ods-font-color: $body-font-color;
+$ods-font-color-dark: #333;
+$ods-font-color-medium: #4d4d4d;
+$ods-font-color-light: #fff;
+
+$ods-panel-dark--font-color: #fff;
+$ods-panel-dark--link-color: #d1ddeb;
 
 $ods-form-input-font-color: rgba(0,0,0,.75);
 $ods-form-label-font-color: #4d4d4d;
 
-//Elements
+/* ---------------
+    Elements       
+--------------- */
+$ods-abbreviation-color: #999;
 $ods-link-color: $anchor-color;
 
-//Components
-$ods-bg-header: #333;
+/* ---------------
+    Components       
+--------------- */
+/* header */
+$ods-header-bg: #333;
 
-$ods-bg-footer: #ededed;
-$ods-border-footer: #d9d9d9;
+/* footer */
+$ods-footer-bg: #ededed;
+$ods-footer-border-color: #d9d9d9;
 
+/* buttons */
+$ods-button-box-shadow-color: #666;
+$ods-button-primary-bg: #0071a9;
+$ods-button-primary--hover-bg: #0083c4;
+$ods-button-secondary-bg: #d1ddeb;
+$ods-button-secondary--hover-bg: #b2c6de;
+$ods-button-alert-bg: #9d2f00;
+$ods-button-alert--hover-bg: #b93700;
+$ods-button-disabled-bg: #737373;
+
+/* panels */
+$ods-panel-border-color: rgba(0,0,0,.1);
+$ods-panel-aside-bg: #f5f5f5;
+$ods-panel-callout-bg: #dff3f3;
+$ods-panel-warning-bg: #fafad2;
+$ods-panel-success-bg: #e6fad2;
+$ods-panel-error-bg: #fad2d2;
+$ods-panel-dark-bg: #4d4d4d;
+
+/* labels */
+$ods-label-default-bg: #ededed;
+$ods-label-status-updated-bg: #fafad2;
+$ods-label-status-open-bg: #e6fad2;
+$ods-label-status-closed-bg: #fad2d2;
+$ods-label-status-under-review-bg: #d2d1eb;
+$ods-label-status-upcoming-bg: #dff3f3;
+$ods-label-status-complete-bg: #006b3f;
+$ods-label-status-implementing-bg: #8138b3;
+$ods-label-status-inactive-bg: #666;
+$ods-label-status-alert-bg: #c91b26;
+
+/* forms */
 $ods-form-input-border-color: #ccc;
 $ods-form-input-box-shadow-color: rgba(0,0,0,.1);
-$ods-form-input-focus-bg: #fff2c4; 
+$ods-form-input--focus-bg: #fff2c4; 
 $ods-form-fieldset-bg: hsla(0,0%,100%,.6);
 $ods-form-select-bg: #fafafa;

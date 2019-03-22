@@ -1,0 +1,47 @@
+.ods-label {
+    background: $ods-label-default-bg;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: .9375rem;
+    line-height: 1;
+    margin: 0 .3125rem .3125rem 0;
+    padding: .25rem .5rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.ods-label--status-updated {
+    @include ods-label-color($ods-label-status-updated-bg, $ods-font-color-medium);
+}
+
+.ods-label--status-open {
+    @include ods-label-color($ods-label-status-open-bg, $ods-font-color-medium);
+}
+
+.ods-label--status-closed {
+    @include ods-label-color($ods-label-status-closed-bg, $ods-font-color-medium);
+}
+
+.ods-label--status-under-review {
+    @include ods-label-color($ods-label-status-under-review-bg, $ods-font-color-medium);
+}
+
+.ods-label--status-upcoming {
+    @include ods-label-color($ods-label-status-upcoming-bg, $ods-font-color-medium);
+}
+
+.ods-label--status-complete {
+    @include ods-label-color($ods-label-status-complete-bg, $ods-font-color-light);
+}
+
+.ods-label--status-implementing {
+    @include ods-label-color($ods-label-status-implementing-bg, $ods-font-color-light);
+}
+
+.ods-label--status-inactive {
+    @include ods-label-color($ods-label-status-inactive-bg, $ods-font-color-light);
+}
+
+.ods-label--status-alert {
+    @include ods-label-color($ods-label-status-alert-bg, $ods-font-color-light);
+}

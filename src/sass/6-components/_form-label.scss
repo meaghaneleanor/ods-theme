@@ -1,5 +1,5 @@
 .ods-form-label {
-    color: $ods-form-label-font-color;
+    color: $ods-font-color-medium;
     cursor: pointer;
     font-size: inherit;
     line-height: 1.5;
@@ -32,6 +32,7 @@
 ------------------- */
 .ods-form-label--required {
     font-weight: 700;
+    margin-bottom: .3rem;
 }
 
 .ods-form-label--has-inline-input {
