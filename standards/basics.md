@@ -46,7 +46,7 @@ And then extend the Foundation button in SASS:
 }
 ```
 
-This has the main benefit of allowing you to switch out different frameworks in the future, so that if you no longer want to use Foundation, you only need to change the extension in `.ontario-button` instead of swaping out class specifications elsewhere in the app. This convention was suggested by Mike Taylr - [read this article for more information](https://medium.com/@mktlr/the-backendification-of-frontend-development-62f218a773d4).
+This has the main benefit of allowing you to switch out different frameworks in the future, so that if you no longer want to use Foundation, you only need to change the extension in `.ontario-button` instead of swaping out class specifications elsewhere in the app. This convention was suggested by Mike Taylor - [read this article for more information](https://medium.com/@mktlr/the-backendification-of-frontend-development-62f218a773d4).
 
 A similar principle applies to CSS variables. Instead of using `$body-font-color`, which is a Foundation-provided name, create an ODS-specific variable called `$ontario-font-color` and set that variable to `$body-font-color`.
 
