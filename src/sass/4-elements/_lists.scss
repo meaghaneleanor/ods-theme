@@ -1,20 +1,31 @@
-// generic list styles
+/* ---------------
+    Generics      
+--------------- */
 ol,
 ul {
     padding-left: 2em;
     margin-bottom: 1.25rem;
-
-    ul {
-        list-style-type: circle;
-    }
 }
 
+ol ul,
+ul ul {
+    list-style-type: circle;
+}
+
+/*
+    This is targeting any unordered/ordered list that has a paragraph
+    as a sibling. This is to mimimize the space between a paragraph
+    with a list next to it.
+*/
 p + ol,
 p + ul {
     margin-top: -.75em;
 }
 
-// parentheses list styles
+/* -------------------
+    List Variations       
+-------------------- */
+/* lists with parentheses */
 .ods-list__bullet--parentheses {
     counter-reset: a;
     padding-left: 1.5rem;
@@ -78,102 +89,94 @@ p + ul {
     }
 }
 
-// fancy list 
+/* fancy list */ 
 .ods-list__bullet--fancy {
     counter-reset: a;
     margin-left: 5.5rem; 
+}
 
-    li {
-        list-style-type: none;
-        min-height: 4rem;
+.ods-list__bullet--fancy li {
+    list-style-type: none;
+    min-height: 4rem;
 
-        &>:first-child {
-            margin-top: -4rem;
-        }
-
-        &:before {
-            border-radius: 3rem;
-            color: $ods-white;
-            content: counter(a);
-            counter-increment: a;
-            display: block;
-            font-family: Raleway,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            height: 4.2rem;
-            line-height: 1;
-            margin-left: -5.5rem;
-            text-align: center;
-            width: 4.2rem;
-        }
+    &>:first-child {
+        margin-top: -4rem;
     }
 
-    /* bullet color variations */
-    &[bullet-color="ods-list__bullet--fancy-blue"] {
-        li:before {
-            background-color: $ods-fancy-list-bullet-blue;
-        }
-    } 
-
-    &[bullet-color="ods-list__bullet--fancy-yellow"] {
-        li:before {
-            background-color: $ods-fancy-list-bullet-yellow;
-        }
-    }
-
-    &[bullet-color="ods-list__bullet--fancy-orange"] {
-        li:before {
-            background-color: $ods-fancy-list-bullet-orange;
-        }
-    }
-
-    &[bullet-color="ods-list__bullet--fancy-red"] {
-        li:before {
-            background-color: $ods-fancy-list-bullet-red;
-        }
-    }
-
-    &[bullet-color="ods-list__bullet--fancy-magenta"] {
-        li:before {
-            background-color: $ods-fancy-list-bullet-magenta;
-        }
-    }
-
-    &[bullet-color="ods-list__bullet--fancy-purple"] {
-        li:before {
-            background-color: $ods-fancy-list-bullet-purple;
-        }
-    }
-
-    &[bullet-color="ods-list__bullet--fancy-green"] {
-        li:before {
-            background-color: $ods-fancy-list-bullet-green;
-        }
+    &:before {
+        border-radius: 3rem;
+        color: $ods-white;
+        content: counter(a);
+        counter-increment: a;
+        display: block;
+        font-family: Raleway,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        height: 4.2rem;
+        line-height: 1;
+        margin-left: -5.5rem;
+        text-align: center;
+        width: 4.2rem;
     }
 }
 
-// inline list
+/* bullet color variations */
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-blue"] li:before {
+    background-color: $ods-fancy-list-bullet-blue;
+} 
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-yellow"] li:before{
+    background-color: $ods-fancy-list-bullet-yellow;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-orange"] li:before {
+    background-color: $ods-fancy-list-bullet-orange;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-red"] li:before {
+    background-color: $ods-fancy-list-bullet-red;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-magenta"] li:before {
+    background-color: $ods-fancy-list-bullet-magenta;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-purple"] li:before {
+    background-color: $ods-fancy-list-bullet-purple;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-green"] li:before {
+    background-color: $ods-fancy-list-bullet-green;
+}
+
+
+/* inline/horizontal lists */
 .ods-list--inline {
     list-style: none;
-    margin: 0 0 1.0625rem -1rem;
+    margin: 0 0 1.0625rem 0;
     overflow: hidden;
     padding: 0;
-    li {
-        display: block;
-        float: left;
-        list-style: none;
-        margin: 0 0 .625rem 1rem;
+}
+
+.ods-list--inline li {
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0 0 .625rem 1rem;
+
+    &:first-of-type {
+        margin-left: 0;
     }
 }
 
-// lists with no bullet styles
+/* lists with no bullets */
 .ods-list--no-bullet {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-//legal lists
+/* legal lists */
 .ods-list--legal,
 .ods-list--legal ol {
     counter-reset: item;
