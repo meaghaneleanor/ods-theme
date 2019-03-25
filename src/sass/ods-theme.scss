@@ -29,12 +29,17 @@ $assetsDir: '../assets' !default;
 @import "./6-components/button";
 @import "./6-components/panel";
 @import "./6-components/labels";
+@import "./6-components/tables";
 @import "./6-components/form";
 @import "./6-components/form-label";
 @import "./6-components/form-input";
 @import "./6-components/form-select";
 @import "./6-components/form-textarea";
 @import "./6-components/form-fieldset";
+
+.ods-button {
+  @extend .button;
+}
 
 @import "./7-overrides/layout.float";
 
