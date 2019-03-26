@@ -12,6 +12,15 @@ ul ul {
     list-style-type: circle;
 }
 
+dl dt {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+dl dd {
+    margin-bottom: .75rem;
+}
+
 /*
     This is targeting any unordered/ordered list that has a paragraph
     as a sibling. This is to mimimize the space between a paragraph
@@ -29,65 +38,51 @@ p + ul {
 .ods-list__bullet--parentheses {
     counter-reset: a;
     padding-left: 1.5rem;
-    
-    li {
-        list-style: none;
-        padding-left: 1rem;
-
-        &:before {
-            content: "(" counter(a,decimal) ") ";
-            counter-increment: a;
-            position: absolute;
-            margin-left: -3rem;
-            width: 2.5rem;
-            text-align: right;
-        }
-    }
-
-    //alpha bullets
-    &[type="a"] {
-        @extend .ods-list__bullet--parentheses;
-
-        li:before {
-            content: "(" counter(a,lower-alpha) ") ";
-        }
-    }
-
-    //roman numeral bullets
-    &[type="i"] {
-        @extend .ods-list__bullet--parentheses;
-
-        li:before {
-            content: "(" counter(a,lower-roman) ") "
-        }
-    }
 }
 
-.ods-list__bullet--parentheses-right {
-    @extend .ods-list__bullet--parentheses;
+.ods-list__bullet--parentheses li {
+    list-style: none;
+    padding-left: 1rem;
+}
 
-    li:before {
+.ods-list__bullet--parentheses li:before {
+    counter-increment: a;
+    position: absolute;
+    margin-left: -3rem;
+    width: 2.5rem;
+    text-align: right;
+}
+
+// double parentheses
+.ods-list__parentheses--double li:before {
+    content: "(" counter(a,decimal) ") ";
+}
+
+    /* alpha bullets */
+    .ods-list__parentheses--double[type="a"] li:before {
+        content: "(" counter(a,lower-alpha) ") ";
+    }
+
+    /* roman numeral bullets */
+    .ods-list__parentheses--double[type="i"] li:before {
+        content: "(" counter(a,lower-roman) ") "
+    }
+
+// single parentheses
+.ods-list__parentheses--right li:before {
+    content: counter(a,decimal) ") ";
+}
+
+    /* alpha bullets */
+    .ods-list__parentheses--right[type="a"] li:before {
         content: counter(a,decimal) ") ";
     }
 
-    //alpha bullets
-    &[type="a"] {
-        @extend .ods-list__bullet--parentheses;
-
-        li:before {
-            content: counter(a,lower-alpha) ") ";
-        }
+    /* roman numeral bullets */
+    .ods-list__parentheses--right[type="i"] li:before {
+        content: counter(a,lower-roman) ") "
     }
 
-    //roman numeral bullets
-    &[type="i"] {
-        @extend .ods-list__bullet--parentheses;
-
-        li:before {
-            content: counter(a,lower-roman) ") "
-        }
-    }
-}
 
 /* fancy list */ 
 .ods-list__bullet--fancy {
@@ -120,6 +115,16 @@ p + ul {
     }
 }
 
+/*
+    This adds extra min-height to fancy list items in Firefox,
+    which prevents the bullets from touching.
+*/
+@-moz-document url-prefix() {
+    .ods-list__bullet--fancy li {
+        min-height: 5rem;
+    }
+}
+
 /* bullet color variations */
 .ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-blue"] li:before {
     background-color: $ods-fancy-list-bullet-blue;
@@ -127,6 +132,7 @@ p + ul {
 
 .ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-yellow"] li:before{
     background-color: $ods-fancy-list-bullet-yellow;
+    color: $ods-black;
 }
 
 .ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-orange"] li:before {
@@ -162,11 +168,7 @@ p + ul {
     display: block;
     float: left;
     list-style: none;
-    margin: 0 0 .625rem 1rem;
-
-    &:first-of-type {
-        margin-left: 0;
-    }
+    margin: 0 0 .625rem 0;
 }
 
 /* lists with no bullets */
@@ -180,26 +182,29 @@ p + ul {
 .ods-list--legal,
 .ods-list--legal ol {
     counter-reset: item;
-    margin-left: 0;
-    margin-top: 0.625em;
-    > li {
-        display: table;
-        margin-bottom: 0.3em;
-        &:before {
-        content: counters(item, ".") ". ";
-        display: table-cell;
-        counter-increment: item;
-        padding-right: 0.6em;
-        }
-    }
+    margin: 0;
 }
 
-.ods-list--legal-with-parentheses,
-.ods-list--legal-with-parentheses ol {
-    @extend .ods-list--legal;
+.ods-list--legal > li,
+.ods-list--legal ol > li {
+    display: table;
+    margin-bottom: 0.3em;
+}
 
-    & li:before,
-    & ol li:before {
-        content: "(" counters(item, ".") ") ";
-    }
+.ods-list--legal > li:before,
+.ods-list--legal ol > li:before {
+    display: table-cell;
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+    padding-right: 0.6em;
+}
+
+.ods-list--legal-double-parentheses li:before,
+.ods-list--legal-double-parentheses ol li:before {
+    content: "(" counters(item, ".") ") ";
+}
+
+.ods-list--legal-single-parentheses li:before,
+.ods-list--legal-single-parentheses ol li:before {
+    content: counters(item, ".") ") ";
 }
