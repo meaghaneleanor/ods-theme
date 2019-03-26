@@ -1,0 +1,44 @@
+.ods-button,
+input.ods-button,
+input[type="submit"] {
+    @extend .button;
+
+    box-shadow: 0 2px 4px $ods-button-box-shadow-color;
+    line-height: normal;
+    margin-right: 1rem;
+    padding: .75rem 1.5rem .8125rem;
+
+    &:active,
+    &:focus,
+    &:hover {
+        box-shadow: 0 1px 3px $ods-button-box-shadow-color;
+    }
+
+    &[disabled] {
+        background: $ods-button-disabled-bg;
+        box-shadow: none;
+        color: $ods-font-color-light;
+        opacity: 1;
+        transition: none;
+
+        &:hover {
+            background: $ods-button-disabled-bg;
+        }
+    }
+}
+
+.ods-button--primary,
+input.ods-button--primary,
+input[type="submit"] {
+    @include ods-button-color($ods-button-primary-bg, $ods-button-primary--hover-bg, $ods-font-color-light);
+}
+
+.ods-button--secondary,
+input.ods-button--secondary {
+    @include ods-button-color($ods-button-secondary-bg, $ods-button-secondary--hover-bg, $ods-font-color-dark);
+}
+
+.ods-button--alert,
+input.ods-button--alert {
+    @include ods-button-color($ods-button-alert-bg, $ods-button-alert--hover-bg, $ods-font-color-light);
+}

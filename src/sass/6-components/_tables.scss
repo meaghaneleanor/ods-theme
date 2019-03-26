@@ -1,0 +1,94 @@
+.ods-table {
+    border-bottom-color: $ods-lightest-gray;
+}
+
+.ods-table thead {
+    background: $ods-medium-gray;
+}
+
+.ods-table thead a {
+    color: lighten($ods-table--link-color, 5%);
+    text-decoration: underline;
+
+    &:hover {
+        color: $ods-font-color-light;
+    }
+}
+
+.ods-table thead th {
+    color: $ods-white;
+    display: table-cell;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.5625rem;
+    padding: .5rem .625rem .625rem;
+    text-align: left;
+}
+
+.ods-table th,
+.ods-table td {
+    color: $ods-darkest-gray;
+}
+
+.ods-table tfoot {
+    background: $ods-table-tfoot-bg;
+    font-weight: 700;
+}
+
+.ods-table tfoot th {
+    font-size: .875rem;
+}
+
+.ods-table tfoot td {
+    font-weight: 700;
+}
+
+.ods-table caption {
+    background: $ods-lightest-gray;
+    color: $ods-dark-gray;
+    font-weight: 700;
+}
+
+/* -------------------
+    Table Modifiers      
+-------------------- */
+.ods-table--full-width {
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 1.25rem;
+}
+
+/* -------------------
+    Table Variations      
+-------------------- */
+/* Table with stripes */
+.ods-table--with-stripes tr:nth-of-type(2n) {
+    background: $ods-table-stripe-bg;
+}
+
+/* Table without stripes */
+.ods-table--no-stripes th[scope="row"],
+.ods-table--no-stripes td {
+    background: $ods-white;
+    border-bottom: 1px dotted $ods-lighter-gray;
+}
+
+/* Table with numeric values */
+.ods-table--numeric tr:nth-of-type(2n) {
+    background: $ods-table-stripe-bg;
+}
+
+.ods-table--numeric thead th {
+    text-align: right;
+}
+
+.ods-table--numeric thead .ods-table__table-heading--non-numeric {
+    text-align: left;
+}
+
+.ods-table--numeric tbody td,
+.ods-table--numeric tfoot td {
+    font-family: Consolas,Liberation Mono,Courier,monospace;
+    font-size: .85rem;
+    text-align: right;
+}

@@ -1,21 +1,82 @@
-//Settings
+/* ---------------
+    Settings       
+--------------- */
+$ods-darkest-gray: #222;
+$ods-dark-gray: #4d4d4d;
 $ods-medium-gray: #666;
 $ods-light-gray: #737373;
+$ods-lighter-gray: #d9d9d9;
+$ods-lightest-gray: #ededed;
 $ods-white: #fff;
 $ods-black: #000;
 
-//Generics
+/* ---------------
+    Generics       
+--------------- */
 $ods-font-color: $body-font-color;
+$ods-font-color-light: #fff;
+$ods-font-color-dark: #333;
+$ods-font-color-medium: #4d4d4d;
 
-//Elements
+$ods-panel-dark--font-color: #fff;
+$ods-panel-dark--link-color: #d1ddeb;
+
+$ods-table--link-color: #d1ddeb;
+
+/* ---------------
+    Elements       
+--------------- */
+$ods-abbreviation-color: #999;
 $ods-link-color: $anchor-color;
 
-//Components
-$ods-bg-header: #333;
+/* ---------------
+    Components       
+--------------- */
+/* header */
+$ods-header-bg: #333;
 
-$ods-border-footer: #d9d9d9;
-$ods-bg-footer: #ededed;
+/* footer */
+$ods-footer-bg: #ededed;
+$ods-footer-border-color: #d9d9d9;
 
+/* buttons */
+$ods-button-box-shadow-color: #666;
+$ods-button-primary-bg: #0071a9;
+$ods-button-primary--hover-bg: #0083c4;
+$ods-button-secondary-bg: #d1ddeb;
+$ods-button-secondary--hover-bg: #b2c6de;
+$ods-button-alert-bg: #9d2f00;
+$ods-button-alert--hover-bg: #b93700;
+$ods-button-disabled-bg: #737373;
+
+/* panels */
+$ods-panel-border-color: rgba(0,0,0,.1);
+$ods-panel-aside-bg: #f5f5f5;
+$ods-panel-callout-bg: #dff3f3;
+$ods-panel-warning-bg: #fafad2;
+$ods-panel-success-bg: #e6fad2;
+$ods-panel-error-bg: #fad2d2;
+$ods-panel-dark-bg: #4d4d4d;
+
+/* labels */
+$ods-label-default-bg: #ededed;
+$ods-label-status-updated-bg: #fafad2;
+$ods-label-status-open-bg: #e6fad2;
+$ods-label-status-closed-bg: #fad2d2;
+$ods-label-status-under-review-bg: #d2d1eb;
+$ods-label-status-upcoming-bg: #dff3f3;
+$ods-label-status-complete-bg: #006b3f;
+$ods-label-status-implementing-bg: #8138b3;
+$ods-label-status-inactive-bg: #666;
+$ods-label-status-alert-bg: #c91b26;
+
+/* table */
+$ods-table-tfoot-bg: #d1ddeb;
+$ods-table-stripe-bg: #efefef;
+$ods-label-font-color-dark: #4d4d4d;
+$ods-label-font-color-light: #fff;
+
+/* lists */
 $ods-fancy-list-bullet-blue: #0087cb;
 $ods-fancy-list-bullet-yellow: #FFC300;
 $ods-fancy-list-bullet-orange: #F2671F;

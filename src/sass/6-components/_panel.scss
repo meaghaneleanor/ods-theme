@@ -1,0 +1,69 @@
+.ods-panel {
+    border-color: $ods-panel-border-color;
+    border-style: solid;
+    border-width: 0 0 0 $ods-standard-component-padding;
+    color: $ods-font-color-dark;
+    margin-bottom: 1.25rem;
+    padding: $ods-standard-component-padding;
+    padding-right: 2.5rem;
+    position: relative;
+}
+
+.ods-panel p:last-child {
+    margin: 0;
+}
+
+.ods-panel__close-button {
+    font-size: rem-calc($ods-standard-component-padding * 2);
+    line-height: 1;
+    position: absolute;
+    right: $ods-standard-component-padding;
+    top: 10%;
+}
+
+.ods-panel__image {
+    margin: 0 0 1em 1.5em;
+}
+
+/* Panel color variations */
+.ods-panel--aside {
+    background: $ods-panel-aside-bg;
+}
+
+.ods-panel--callout {
+    background: $ods-panel-callout-bg;
+}
+
+.ods-panel--dark {
+    background: $ods-panel-dark-bg;
+    color: $ods-panel-dark--font-color;
+}
+
+.ods-panel--dark abbr,
+.ods-panel--dark abbr[title] {
+    border-bottom: 2px dotted $ods-panel-dark--link-color;
+}
+
+.ods-panel--dark a,
+.ods-panel--dark > abbr,
+.ods-panel--dark >  abbr[title] {
+    color: $ods-panel-dark--link-color;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {   
+        color: $ods-panel-dark--font-color;
+    }
+}
+
+.ods-panel--error {
+    background: $ods-panel-error-bg;
+}
+    
+.ods-panel--success {
+    background: $ods-panel-success-bg;
+}
+    
+.ods-panel--warning {
+    background: $ods-panel-warning-bg;
+}
