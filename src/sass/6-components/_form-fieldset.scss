@@ -3,7 +3,8 @@
     border: 1px solid $ods-form-input-border-color;
 }
 
-.ods-form-fieldset legend {
+.ods-form-fieldset legend,
+.ods-form-fieldset__legend {
     color: $ods-font-color-medium;
     font-weight: 700;
 }
