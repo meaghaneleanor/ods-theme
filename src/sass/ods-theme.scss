@@ -18,7 +18,8 @@ $assetsDir: '../assets' !default;
 
 @import "./3-generics/fonts";
 
-@import "./4-elements/elements";
+@import "./4-elements/_elements";
+@import "./4-elements/lists";
 
 @import "./5-objects/icons";
 @import "./5-objects/layout";
@@ -31,11 +32,12 @@ $assetsDir: '../assets' !default;
 @import "./6-components/labels";
 @import "./6-components/tables";
 
+
+@import "./7-overrides/layout.float";
+
 .ods-button {
   @extend .button;
 }
-
-@import "./7-overrides/layout.float";
 
 .ods-list--no-bullet {
   list-style: none;
@@ -45,7 +47,7 @@ $assetsDir: '../assets' !default;
 .ods-list--inline {
   li {
     display: inline;
-    margin-right: 1rem;
+    margin-right: 1.25rem;
   }
 }
 

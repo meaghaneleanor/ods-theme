@@ -1,0 +1,210 @@
+/* ---------------
+    Generics      
+--------------- */
+ol,
+ul {
+    padding-left: 2em;
+    margin-bottom: 1.25rem;
+}
+
+ol ul,
+ul ul {
+    list-style-type: circle;
+}
+
+dl dt {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+dl dd {
+    margin-bottom: .75rem;
+}
+
+/*
+    This is targeting any unordered/ordered list that has a paragraph
+    as a sibling. This is to mimimize the space between a paragraph
+    with a list next to it.
+*/
+p + ol,
+p + ul {
+    margin-top: -.75em;
+}
+
+/* -------------------
+    List Variations       
+-------------------- */
+/* lists with parentheses */
+.ods-list__bullet--parentheses {
+    counter-reset: a;
+    padding-left: 1.5rem;
+}
+
+.ods-list__bullet--parentheses li {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.ods-list__bullet--parentheses li:before {
+    counter-increment: a;
+    position: absolute;
+    margin-left: -3rem;
+    width: 2.5rem;
+    text-align: right;
+}
+
+// double parentheses
+.ods-list__parentheses--double li:before {
+    content: "(" counter(a,decimal) ") ";
+}
+
+    /* alpha bullets */
+    .ods-list__parentheses--double[type="a"] li:before {
+        content: "(" counter(a,lower-alpha) ") ";
+    }
+
+    /* roman numeral bullets */
+    .ods-list__parentheses--double[type="i"] li:before {
+        content: "(" counter(a,lower-roman) ") "
+    }
+
+// single parentheses
+.ods-list__parentheses--right li:before {
+    content: counter(a,decimal) ") ";
+}
+
+    /* alpha bullets */
+    .ods-list__parentheses--right[type="a"] li:before {
+        content: counter(a,decimal) ") ";
+    }
+
+    /* roman numeral bullets */
+    .ods-list__parentheses--right[type="i"] li:before {
+        content: counter(a,lower-roman) ") "
+    }
+
+
+/* fancy list */ 
+.ods-list__bullet--fancy {
+    counter-reset: a;
+    margin-left: 5.5rem; 
+}
+
+.ods-list__bullet--fancy li {
+    list-style-type: none;
+    min-height: 4rem;
+
+    &>:first-child {
+        margin-top: -4rem;
+    }
+
+    &:before {
+        border-radius: 3rem;
+        color: $ods-white;
+        content: counter(a);
+        counter-increment: a;
+        display: block;
+        font-family: Raleway,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        height: 4.2rem;
+        line-height: 1;
+        margin-left: -5.5rem;
+        text-align: center;
+        width: 4.2rem;
+    }
+}
+
+/*
+    This adds extra min-height to fancy list items in Firefox,
+    which prevents the bullets from touching.
+*/
+@-moz-document url-prefix() {
+    .ods-list__bullet--fancy li {
+        min-height: 5rem;
+    }
+}
+
+/* bullet color variations */
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-blue"] li:before {
+    background-color: $ods-fancy-list-bullet-blue;
+} 
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-yellow"] li:before{
+    background-color: $ods-fancy-list-bullet-yellow;
+    color: $ods-black;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-orange"] li:before {
+    background-color: $ods-fancy-list-bullet-orange;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-red"] li:before {
+    background-color: $ods-fancy-list-bullet-red;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-magenta"] li:before {
+    background-color: $ods-fancy-list-bullet-magenta;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-purple"] li:before {
+    background-color: $ods-fancy-list-bullet-purple;
+}
+
+.ods-list__bullet--fancy[bullet-color="ods-list__bullet--fancy-green"] li:before {
+    background-color: $ods-fancy-list-bullet-green;
+}
+
+
+/* inline/horizontal lists */
+.ods-list--inline {
+    list-style: none;
+    margin: 0 0 1.0625rem 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.ods-list--inline li {
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0 0 .625rem 0;
+}
+
+/* lists with no bullets */
+.ods-list--no-bullet {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* legal lists */
+.ods-list--legal,
+.ods-list--legal ol {
+    counter-reset: item;
+    margin: 0;
+}
+
+.ods-list--legal > li,
+.ods-list--legal ol > li {
+    display: table;
+    margin-bottom: 0.3em;
+}
+
+.ods-list--legal > li:before,
+.ods-list--legal ol > li:before {
+    display: table-cell;
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+    padding-right: 0.6em;
+}
+
+.ods-list--legal-double-parentheses li:before,
+.ods-list--legal-double-parentheses ol li:before {
+    content: "(" counters(item, ".") ") ";
+}
+
+.ods-list--legal-single-parentheses li:before,
+.ods-list--legal-single-parentheses ol li:before {
+    content: counters(item, ".") ") ";
+}
