@@ -1,85 +1,85 @@
 /* ---------------
     Settings       
 --------------- */
-$ods-darkest-gray: #222;
-$ods-dark-gray: #4d4d4d;
-$ods-medium-gray: #666;
-$ods-light-gray: #737373;
-$ods-lighter-gray: #d9d9d9;
-$ods-lightest-gray: #ededed;
-$ods-white: #fff;
+$ontario-darkest-gray: #222;
+$ontario-dark-gray: #4d4d4d;
+$ontario-medium-gray: #666;
+$ontario-light-gray: #737373;
+$ontario-lighter-gray: #d9d9d9;
+$ontario-lightest-gray: #ededed;
+$ontario-white: #fff;
 
 /* ---------------
     Generics       
 --------------- */
-$ods-font-color: $body-font-color;
-$ods-font-color-light: #fff;
-$ods-font-color-dark: #333;
-$ods-font-color-medium: #4d4d4d;
+$ontario-font-color: $body-font-color;
+$ontario-font-color-light: #fff;
+$ontario-font-color-dark: #333;
+$ontario-font-color-medium: #4d4d4d;
 
-$ods-panel-dark--font-color: #fff;
-$ods-panel-dark--link-color: #d1ddeb;
+$ontario-panel-dark--font-color: #fff;
+$ontario-panel-dark--link-color: #d1ddeb;
 
-$ods-table--link-color: #d1ddeb;
+$ontario-table--link-color: #d1ddeb;
 
-$ods-form-input-font-color: rgba(0,0,0,.75);
+$ontario-form-input-font-color: rgba(0,0,0,.75);
 
 /* ---------------
     Elements       
 --------------- */
-$ods-abbreviation-color: #999;
-$ods-link-color: $anchor-color;
+$ontario-abbreviation-color: #999;
+$ontario-link-color: $anchor-color;
 
 /* ---------------
     Components       
 --------------- */
 /* header */
-$ods-header-bg: #333;
+$ontario-header-bg: #333;
 
 /* footer */
-$ods-footer-bg: #ededed;
-$ods-footer-border-color: #d9d9d9;
+$ontario-footer-bg: #ededed;
+$ontario-footer-border-color: #d9d9d9;
 
 /* buttons */
-$ods-button-box-shadow-color: #666;
-$ods-button-primary-bg: #0071a9;
-$ods-button-primary--hover-bg: #0083c4;
-$ods-button-secondary-bg: #d1ddeb;
-$ods-button-secondary--hover-bg: #b2c6de;
-$ods-button-alert-bg: #9d2f00;
-$ods-button-alert--hover-bg: #b93700;
-$ods-button-disabled-bg: #737373;
+$ontario-button-box-shadow-color: #666;
+$ontario-button-primary-bg: #0071a9;
+$ontario-button-primary--hover-bg: #0083c4;
+$ontario-button-secondary-bg: #d1ddeb;
+$ontario-button-secondary--hover-bg: #b2c6de;
+$ontario-button-alert-bg: #9d2f00;
+$ontario-button-alert--hover-bg: #b93700;
+$ontario-button-disabled-bg: #737373;
 
 /* panels */
-$ods-panel-border-color: rgba(0,0,0,.1);
-$ods-panel-aside-bg: #f5f5f5;
-$ods-panel-callout-bg: #dff3f3;
-$ods-panel-warning-bg: #fafad2;
-$ods-panel-success-bg: #e6fad2;
-$ods-panel-error-bg: #fad2d2;
-$ods-panel-dark-bg: #4d4d4d;
+$ontario-panel-border-color: rgba(0,0,0,.1);
+$ontario-panel-aside-bg: #f5f5f5;
+$ontario-panel-callout-bg: #dff3f3;
+$ontario-panel-warning-bg: #fafad2;
+$ontario-panel-success-bg: #e6fad2;
+$ontario-panel-error-bg: #fad2d2;
+$ontario-panel-dark-bg: #4d4d4d;
 
 /* labels */
-$ods-label-default-bg: #ededed;
-$ods-label-status-updated-bg: #fafad2;
-$ods-label-status-open-bg: #e6fad2;
-$ods-label-status-closed-bg: #fad2d2;
-$ods-label-status-under-review-bg: #d2d1eb;
-$ods-label-status-upcoming-bg: #dff3f3;
-$ods-label-status-complete-bg: #006b3f;
-$ods-label-status-implementing-bg: #8138b3;
-$ods-label-status-inactive-bg: #666;
-$ods-label-status-alert-bg: #c91b26;
+$ontario-label-default-bg: #ededed;
+$ontario-label-status-updated-bg: #fafad2;
+$ontario-label-status-open-bg: #e6fad2;
+$ontario-label-status-closed-bg: #fad2d2;
+$ontario-label-status-under-review-bg: #d2d1eb;
+$ontario-label-status-upcoming-bg: #dff3f3;
+$ontario-label-status-complete-bg: #006b3f;
+$ontario-label-status-implementing-bg: #8138b3;
+$ontario-label-status-inactive-bg: #666;
+$ontario-label-status-alert-bg: #c91b26;
 
 /* table */
-$ods-table-tfoot-bg: #d1ddeb;
-$ods-table-stripe-bg: #efefef;
-$ods-label-font-color-dark: #4d4d4d;
-$ods-label-font-color-light: #fff;
+$ontario-table-tfoot-bg: #d1ddeb;
+$ontario-table-stripe-bg: #efefef;
+$ontario-label-font-color-dark: #4d4d4d;
+$ontario-label-font-color-light: #fff;
 
 /* forms */
-$ods-form-input-border-color: #ccc;
-$ods-form-input-box-shadow-color: rgba(0,0,0,.1);
-$ods-form-input--focus-bg: #fff2c4; 
-$ods-form-fieldset-bg: hsla(0,0%,100%,.6);
-$ods-form-select-bg: #fafafa;
+$ontario-form-input-border-color: #ccc;
+$ontario-form-input-box-shadow-color: rgba(0,0,0,.1);
+$ontario-form-input--focus-bg: #fff2c4; 
+$ontario-form-fieldset-bg: hsla(0,0%,100%,.6);
+$ontario-form-select-bg: #fafafa;

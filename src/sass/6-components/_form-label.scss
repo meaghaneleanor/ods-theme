@@ -1,5 +1,5 @@
-.ods-form-label {
-    color: $ods-font-color-medium;
+.ontario-form-label {
+    color: $ontario-font-color-medium;
     cursor: pointer;
     font-size: inherit;
     line-height: 1.5;
@@ -10,8 +10,8 @@
     is a checkbox/radio input. This is to allow for labels to sit 
     beside rather than above the inputs.
 */ 
-.ods-form-label[type="checkbox"] + label,
-.ods-form-label[type="radio"] + label {
+.ontario-form-label[type="checkbox"] + label,
+.ontario-form-label[type="radio"] + label {
     display: inline-block;
     margin-left: .5rem;
     margin-right: 1rem;
@@ -22,24 +22,24 @@
     are children of labels. There should only be additional
     margin added to these inputs if their parent is a label.
 */
-.ods-form-label > input[type="checkbox"],
-.ods-form-label > input[type="radio"] {
+.ontario-form-label > input[type="checkbox"],
+.ontario-form-label > input[type="radio"] {
     margin-right: 0.5rem;
 }
 
 /* -------------------
     Label Variations      
 ------------------- */
-.ods-form-label--required {
+.ontario-form-label--required {
     font-weight: 700;
     margin-bottom: .3rem;
 }
 
-.ods-form-label--has-inline-input {
+.ontario-form-label--has-inline-input {
     display: block;
     margin: 0 0 .5rem 1.5rem;
 }
 
-.ods-form-label--has-inline-input input {
+.ontario-form-label--has-inline-input input {
     margin: 0 .25rem 0 -1.5rem;
 }

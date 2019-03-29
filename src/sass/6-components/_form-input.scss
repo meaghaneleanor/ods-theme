@@ -1,8 +1,8 @@
-.ods-form-input:not([type="checkbox"]) {
-    background-color: $ods-white;
-    border: 1px solid $ods-form-input-border-color;
-    box-shadow: inset 0 1px 2px $ods-form-input-box-shadow-color;
-    color: $ods-form-input-font-color;
+.ontario-form-input:not([type="checkbox"]) {
+    background-color: $ontario-white;
+    border: 1px solid $ontario-form-input-border-color;
+    box-shadow: inset 0 1px 2px $ontario-form-input-box-shadow-color;
+    color: $ontario-form-input-font-color;
     transition: border-color .15s linear, background .15s linear;
     -webkit-transition: border-color .15s linear, background .15s linear;
     -moz-transition: border-color .15s linear, background .15s linear;
@@ -11,37 +11,37 @@
     -webkit-appearance: none;
 
     &:focus {
-        border: 1px solid $ods-medium-gray;
-        background-color: $ods-form-input--focus-bg;
+        border: 1px solid $ontario-medium-gray;
+        background-color: $ontario-form-input--focus-bg;
     }
 
     // placeholder styles have to be all on separate lines - they do not work if grouped together!
     &::placeholder {
-        color: $ods-medium-gray;
+        color: $ontario-medium-gray;
     }
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color: $ods-medium-gray;
+        color: $ontario-medium-gray;
         font-size: .85rem;
     }
 
     &::-moz-placeholder { /* Firefox 19+ */
-        color: $ods-medium-gray;
+        color: $ontario-medium-gray;
         font-size: .85rem;
     }
     
     &:-ms-input-placeholder { /* IE 10+ */
-        color: $ods-medium-gray;
+        color: $ontario-medium-gray;
         font-size: .85rem;
     }
     
     &:-moz-placeholder { /* Firefox 18- */
-        color: $ods-medium-gray;
+        color: $ontario-medium-gray;
         font-size: .85rem;
     }
 }
 
-.ods-form-input__button--clear {
+.ontario-form-input__button--clear {
     display: inline-block;
     cursor: pointer;
     position: absolute;

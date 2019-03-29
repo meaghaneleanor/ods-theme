@@ -1,14 +1,14 @@
-.ods-form-select {
-    background-color: $ods-form-select-bg;
-    border: 1px solid $ods-form-input-border-color;
+.ontario-form-select {
+    background-color: $ontario-form-select-bg;
+    border: 1px solid $ontario-form-input-border-color;
     border-radius: 0;
     font-size: .875rem;
     -webkit-appearance: none;
     -moz-appearance: none;
 
     &:focus {
-        background-color: $ods-form-select-bg;
-        border: 1px solid $ods-form-input-border-color;
+        background-color: $ontario-form-select-bg;
+        border: 1px solid $ontario-form-input-border-color;
         outline: 5px auto -webkit-focus-ring-color;
     }
 }

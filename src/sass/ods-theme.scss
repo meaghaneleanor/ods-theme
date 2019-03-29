@@ -37,28 +37,28 @@ $assetsDir: '../assets' !default;
 @import "./6-components/form-textarea";
 @import "./6-components/form-fieldset";
 
-.ods-button {
+.ontario-button {
   @extend .button;
 }
 
 @import "./7-overrides/layout.float";
 
-.ods-list--no-bullet {
+.ontario-list--no-bullet {
   list-style: none;
   margin-left: 0;
 }
 
-.ods-list--inline {
+.ontario-list--inline {
   li {
     display: inline;
     margin-right: 1rem;
   }
 }
 
-.ods-margin--top-double {
+.ontario-margin--top-double {
   margin-top: 2rem;
 }
 
-.ods-padding--bottom-double {
+.ontario-padding--bottom-double {
   padding-bottom: 2rem;
 }

@@ -1,5 +1,5 @@
 body {
-  color: $ods-font-color;
+  color: $ontario-font-color;
   cursor: auto;
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-style: normal;
@@ -18,44 +18,44 @@ a {
 }
 
 h1 {
-  @include ods-header-calc('h1');
+  @include ontario-header-calc('h1');
 }
 
 h2 {
-  @include ods-header-calc('h2');
+  @include ontario-header-calc('h2');
 }
 
 h3 {
-  @include ods-header-calc('h3');
+  @include ontario-header-calc('h3');
 }
 
 h4 {
-  @include ods-header-calc('h4');
+  @include ontario-header-calc('h4');
 }
 
 h5 {
-  @include ods-header-calc('h5');
+  @include ontario-header-calc('h5');
 }
 
 h6 {
-  @include ods-header-calc('h6');
+  @include ontario-header-calc('h6');
 }
 
 h1, 
 h2, 
 h1 abbr, 
 h2 abbr {
-  color: $ods-font-color;
+  color: $ontario-font-color;
 }
 
 h3, 
 h3 > abbr {
-  color: $ods-medium-gray;
+  color: $ontario-medium-gray;
 }
 
 h4, 
 h4 abbr {
-  color: $ods-light-gray;
+  color: $ontario-light-gray;
 }
 
 small,
@@ -105,7 +105,7 @@ select:required {
 
 abbr, 
 abbr[title] {
-  border-bottom: 2px dotted $ods-abbreviation-color;
+  border-bottom: 2px dotted $ontario-abbreviation-color;
 }
 
 table {
