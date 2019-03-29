@@ -18,7 +18,8 @@ $assetsDir: '../assets' !default;
 
 @import "./3-generics/fonts";
 
-@import "./4-elements/elements";
+@import "./4-elements/_elements";
+@import "./4-elements/lists";
 
 @import "./5-objects/icons";
 @import "./5-objects/layout";
@@ -37,13 +38,13 @@ $assetsDir: '../assets' !default;
 @import "./6-components/form-textarea";
 @import "./6-components/form-fieldset";
 
+@import "./7-overrides/layout.float";
+
 .ontario-button {
   @extend .button;
 }
 
-@import "./7-overrides/layout.float";
-
-.ontario-list--no-bullet {
+.ods-list--no-bullet {
   list-style: none;
   margin-left: 0;
 }
@@ -51,7 +52,7 @@ $assetsDir: '../assets' !default;
 .ontario-list--inline {
   li {
     display: inline;
-    margin-right: 1rem;
+    margin-right: 1.25rem;
   }
 }
 
