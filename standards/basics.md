@@ -52,9 +52,11 @@ A similar principle applies to CSS variables. Instead of using `$body-font-color
 
 ## Chaining vs. extending
 
-When creating multiple variants of the same basic element, there are two main options. Either you use a single CSS class for each variant that contains all of the CSS required to style that element and apply that class to the HTML element, or you define a baseline style for all variants, and use additional classes to apply variant styles.
+When creating multiple variants of the same basic element, there are two main options. You can either use a single CSS class for each variant that contains all of the CSS required to style that element, or you define a baseline style for all variants, and use additional classes to apply variant styles.
 
-The advantage of the first method is more readable HTML. The advantage of the second method is less repeated and more maintainable code. Avoid using `@extend` (except in cases of applying the Foundation settings) in your variant classes, because that will create a lot of redundant code in the final compiled CSS. Instead, if you're building variants, you should follow this basic pattern:
+The advantage of the first method is more readable HTML, because each variant only needs one class. The advantage of the second method is less repeated and more maintainable code, because there is less redundant CSS between classes. This project uses the second strategy.
+
+Avoid using `@extend` (except in cases of applying the Foundation settings) in your variant classes, because that will create a lot of redundant code in the final compiled CSS. Instead, if you're building variants, you should follow this basic pattern:
 
 ```
 .ontario-element {
@@ -74,7 +76,7 @@ The advantage of the first method is more readable HTML. The advantage of the se
 }
 ```
 
-The trade-off is that the HTML will look a little bit more redundant, like `<a class="ontario-button ontario-button--disabled">`, but this will be easier to maintain in the long-run.
+The trade-off is that the HTML will look a little bit more redundant, like `<a class="ontario-button ontario-button--disabled">`, but this will be easier to maintain in the long-run. If you need to share code between classes but the baseline code will never be used, consider using a [placeholder](when-to-use-extends-vs-mixins).
 
 ## Nesting
 
