@@ -1,4 +1,4 @@
-# ODS Theme CSS Architecture
+# Ontario Theme CSS Architecture
 
 ## BEM
 

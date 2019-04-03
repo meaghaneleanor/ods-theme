@@ -1,21 +1,21 @@
-.ods-grid-container {
+.ontario-grid-container {
   @extend .grid-container;
   padding: 0 .9375rem;
 }
 
-.ods-grid-row {
+.ontario-grid-row {
   @extend .grid-x;
 }
 
-.ods-grid-cell {
+.ontario-grid-cell {
   @extend .cell;
 }
 
-.ods-show-for-medium {
+.ontario-show-for-medium {
   @extend .show-for-medium;
 }
 
-.ods-full-width {
+.ontario-full-width {
   position: relative;
   &:before, &:after {
     content: "";

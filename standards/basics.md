@@ -35,20 +35,20 @@ As much as possible, avoid baking in framework-specific classes. With the except
 
 You should use a name-spaced
 
-```<a class="ods-button">```
+```<a class="ontario-button">```
 
 And then extend the Foundation button in SASS:
 
 ```
-.ods-button {
+.ontario-button {
   @extend .button;
   // ...additional styes
 }
 ```
 
-This has the main benefit of allowing you to switch out different frameworks in the future, so that if you no longer want to use Foundation, you only need to change the extension in `.ods-button` instead of swaping out class specifications elsewhere in the app.
+This has the main benefit of allowing you to switch out different frameworks in the future, so that if you no longer want to use Foundation, you only need to change the extension in `.ontario-button` instead of swaping out class specifications elsewhere in the app.
 
-A similar principle applies to CSS variables. Instead of using `$body-font-color`, which is a Foundation-provided name, create an ODS-specific variable called `$ods-font-color` and set that variable to `$body-font-color`.
+A similar principle applies to CSS variables. Instead of using `$body-font-color`, which is a Foundation-provided name, create an ODS-specific variable called `$ontario-font-color` and set that variable to `$body-font-color`.
 
 ## Chaining vs. extending
 

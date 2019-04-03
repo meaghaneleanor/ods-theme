@@ -1,5 +1,5 @@
-.ods-label {
-    background: $ods-label-default-bg;
+.ontario-label {
+    background: $ontario-label-default-bg;
     border-radius: 3px;
     display: inline-block;
     font-size: .9375rem;
@@ -10,38 +10,38 @@
     white-space: nowrap;
 }
 
-.ods-label--status-updated {
-    @include ods-label-color($ods-label-status-updated-bg, $ods-font-color-medium);
+.ontario-label--status-updated {
+    @include ontario-label-color($ontario-label-status-updated-bg, $ontario-font-color-medium);
 }
 
-.ods-label--status-open {
-    @include ods-label-color($ods-label-status-open-bg, $ods-font-color-medium);
+.ontario-label--status-open {
+    @include ontario-label-color($ontario-label-status-open-bg, $ontario-font-color-medium);
 }
 
-.ods-label--status-closed {
-    @include ods-label-color($ods-label-status-closed-bg, $ods-font-color-medium);
+.ontario-label--status-closed {
+    @include ontario-label-color($ontario-label-status-closed-bg, $ontario-font-color-medium);
 }
 
-.ods-label--status-under-review {
-    @include ods-label-color($ods-label-status-under-review-bg, $ods-font-color-medium);
+.ontario-label--status-under-review {
+    @include ontario-label-color($ontario-label-status-under-review-bg, $ontario-font-color-medium);
 }
 
-.ods-label--status-upcoming {
-    @include ods-label-color($ods-label-status-upcoming-bg, $ods-font-color-medium);
+.ontario-label--status-upcoming {
+    @include ontario-label-color($ontario-label-status-upcoming-bg, $ontario-font-color-medium);
 }
 
-.ods-label--status-complete {
-    @include ods-label-color($ods-label-status-complete-bg, $ods-font-color-light);
+.ontario-label--status-complete {
+    @include ontario-label-color($ontario-label-status-complete-bg, $ontario-font-color-light);
 }
 
-.ods-label--status-implementing {
-    @include ods-label-color($ods-label-status-implementing-bg, $ods-font-color-light);
+.ontario-label--status-implementing {
+    @include ontario-label-color($ontario-label-status-implementing-bg, $ontario-font-color-light);
 }
 
-.ods-label--status-inactive {
-    @include ods-label-color($ods-label-status-inactive-bg, $ods-font-color-light);
+.ontario-label--status-inactive {
+    @include ontario-label-color($ontario-label-status-inactive-bg, $ontario-font-color-light);
 }
 
-.ods-label--status-alert {
-    @include ods-label-color($ods-label-status-alert-bg, $ods-font-color-light);
+.ontario-label--status-alert {
+    @include ontario-label-color($ontario-label-status-alert-bg, $ontario-font-color-light);
 }

@@ -1,50 +1,50 @@
-.ods-main-footer {
-  background: $ods-footer-bg;
+.ontario-main-footer {
+  background: $ontario-footer-bg;
   margin-top: 1rem;
   padding: 2rem 0 1.5rem;
-  border-top: 1px solid $ods-footer-border-color;
+  border-top: 1px solid $ontario-footer-border-color;
   a {
-    color: $ods-font-color;
+    color: $ontario-font-color;
   }
 }
 
-.ods-main-footer .grid-container {
+.ontario-main-footer .grid-container {
   padding: 0;
 }
 
-.ods-main-footer__topic-links-list {
+.ontario-main-footer__topic-links-list {
   li {
     line-height: 1.5rem;
     margin-bottom: 0.625rem;
   }
 }
 
-.ods-main-footer__topic-link {
+.ontario-main-footer__topic-link {
   line-height: 1.5rem;
 }
 
-.ods-main-footer__ministry-photo {
+.ontario-main-footer__ministry-photo {
   width: 135px;
   height: 135px;
   border-radius: 50%;
 }
 
-.ods-main-footer__ministry-subheading {
+.ontario-main-footer__ministry-subheading {
   @extend h3;
   color: $body-font-color;
 }
 
-.ods-main-footer__subheading {
+.ontario-main-footer__subheading {
   @extend h4;
   color: $body-font-color;
 }
 
-.ods-main-footer__notice-links {
+.ontario-main-footer__notice-links {
   font-size: $small-font-size;
 }
 
-.ods-main-footer__swoosh-bg {
-  background: url('#{$assetsDir}/footer-swoosh-bg.png') $ods-footer-bg repeat-x top;
+.ontario-main-footer__swoosh-bg {
+  background: url('#{$assetsDir}/footer-swoosh-bg.png') $ontario-footer-bg repeat-x top;
   width: 100%;
   height: 96px;
 
@@ -52,11 +52,11 @@
 
 
 
-.ods-main-footer__swoosh-right {
+.ontario-main-footer__swoosh-right {
   display: block;
   width: 560px;
   height: 96px;
   position: absolute;
   right: 0;
-  background: url('#{$assetsDir}/footer-swoosh-right.png') $ods-footer-bg no-repeat top right;
+  background: url('#{$assetsDir}/footer-swoosh-right.png') $ontario-footer-bg no-repeat top right;
 }

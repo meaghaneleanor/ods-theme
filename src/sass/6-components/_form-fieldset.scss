@@ -1,0 +1,10 @@
+.ontario-form-fieldset {
+    background: $ontario-form-fieldset-bg;
+    border: 1px solid $ontario-form-input-border-color;
+}
+
+.ontario-form-fieldset legend,
+.ontario-form-fieldset__legend {
+    color: $ontario-font-color-medium;
+    font-weight: 700;
+}

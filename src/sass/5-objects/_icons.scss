@@ -9,7 +9,7 @@
 
 
 
-.ods-icon {
+.ontario-icon {
   font-family: 'onesite' !important;
   speak: none;
   font-style: normal;
@@ -24,15 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ods-icon--ontario-logo:before {
+.ontario-icon--ontario-logo:before {
   content: "\e97a";
 }
 
-.ods-icon--size-medium {
+.ontario-icon--size-medium {
   font-size: 1.2rem;
 }
 
-.ods-icon--menu:before {
+.ontario-icon--menu:before {
   content: "\e970";
 }
 
@@ -83,12 +83,12 @@
 
 
 
-.ods-icon-contactLong:before {
+.ontario-icon-contactLong:before {
   content: "\e922";
 }
 
-.ods-icon-wrapper--long {
-  background: $ods-light-gray;
+.ontario-icon-wrapper--long {
+  background: $ontario-light-gray;
   color: $white;
   border-radius: 0.15rem;
   width: 7rem;
