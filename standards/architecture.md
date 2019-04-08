@@ -1,4 +1,4 @@
-# Ontario Digital Service CSS Architecture
+# Ontario Theme CSS Architecture
 
 ## BEM
 

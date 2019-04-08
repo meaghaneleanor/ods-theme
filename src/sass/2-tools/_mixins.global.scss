@@ -1,11 +1,11 @@
-@mixin ods-header-calc($type){
+@mixin ontario-header-calc($type){
   font-size: rem-calc(map-get(map-get(map-get($header-styles, 'small'), $type), 'font-size'));
   @include breakpoint(medium){
     font-size: rem-calc(map-get(map-get(map-get($header-styles, 'medium'), $type), 'font-size'));
   }
 }
 
-@mixin ods-button-color($bg-color: $ods-button-primary, $hover-bg-color: $ods-button-primary-hover, $text-color: $ods-button-primary-text-color) {
+@mixin ontario-button-color($bg-color: $ontario-button-primary, $hover-bg-color: $ontario-button-primary-hover, $text-color: $ontario-button-primary-text-color) {
   background: $bg-color;
   border: 0 solid $hover-bg-color;
   color: $text-color;
@@ -18,7 +18,7 @@
   }
 }
 
-@mixin ods-label-color($bg-color, $text-color) {
+@mixin ontario-label-color($bg-color, $text-color) {
   background: $bg-color;
   color: $text-color;
 }

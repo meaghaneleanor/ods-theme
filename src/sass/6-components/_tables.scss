@@ -1,0 +1,94 @@
+.ontario-table {
+    border-bottom-color: $ontario-lightest-gray;
+}
+
+.ontario-table thead {
+    background: $ontario-medium-gray;
+}
+
+.ontario-table thead a {
+    color: lighten($ontario-table--link-color, 5%);
+    text-decoration: underline;
+
+    &:hover {
+        color: $ontario-font-color-light;
+    }
+}
+
+.ontario-table thead th {
+    color: $ontario-white;
+    display: table-cell;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.5625rem;
+    padding: .5rem .625rem .625rem;
+    text-align: left;
+}
+
+.ontario-table th,
+.ontario-table td {
+    color: $ontario-darkest-gray;
+}
+
+.ontario-table tfoot {
+    background: $ontario-table-tfoot-bg;
+    font-weight: 700;
+}
+
+.ontario-table tfoot th {
+    font-size: .875rem;
+}
+
+.ontario-table tfoot td {
+    font-weight: 700;
+}
+
+.ontario-table caption {
+    background: $ontario-lightest-gray;
+    color: $ontario-dark-gray;
+    font-weight: 700;
+}
+
+/* -------------------
+    Table Modifiers      
+-------------------- */
+.ontario-table--full-width {
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 1.25rem;
+}
+
+/* -------------------
+    Table Variations      
+-------------------- */
+/* Table with stripes */
+.ontario-table--with-stripes tr:nth-of-type(2n) {
+    background: $ontario-table-stripe-bg;
+}
+
+/* Table without stripes */
+.ontario-table--no-stripes th[scope="row"],
+.ontario-table--no-stripes td {
+    background: $ontario-white;
+    border-bottom: 1px dotted $ontario-lighter-gray;
+}
+
+/* Table with numeric values */
+.ontario-table--numeric tr:nth-of-type(2n) {
+    background: $ontario-table-stripe-bg;
+}
+
+.ontario-table--numeric thead th {
+    text-align: right;
+}
+
+.ontario-table--numeric thead .ontario-table__table-heading--non-numeric {
+    text-align: left;
+}
+
+.ontario-table--numeric tbody td,
+.ontario-table--numeric tfoot td {
+    font-family: Consolas,Liberation Mono,Courier,monospace;
+    font-size: .85rem;
+    text-align: right;
+}
