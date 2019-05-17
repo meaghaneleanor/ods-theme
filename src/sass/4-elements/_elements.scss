@@ -128,3 +128,13 @@ table caption {
   padding: .5rem;
   text-align: center;
 }
+
+figcaption {
+  background: $ontario-lightest-gray;
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+
+figcaption p:last-of-type {
+  margin-bottom: 0;
+}
