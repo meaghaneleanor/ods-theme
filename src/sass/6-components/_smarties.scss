@@ -1,0 +1,66 @@
+.ontario-smarties__container {
+    @extend .infographics__container;
+}
+
+.ontario-smarties__item {
+    padding: 0 $ontario-standard-component-padding calc(#{$ontario-standard-component-padding} * 2);
+
+    /* media queries */
+    @media #{$small-only} {
+        margin-bottom: $ontario-infographic-component-padding--small;
+    }
+}
+
+.ontario-smarties__circle {
+    border-radius: 50%;
+    display: block;
+    font-family: Raleway,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    height: 12.1875rem;
+    margin: 0 auto .5rem;
+    width: 12.1875rem;
+    
+    /* media queries */
+    @media #{$small-only} {
+        height: 9.0625rem;
+        width: 9.0625rem;
+    }
+}
+
+.ontario-smarties__circle-text {
+    display:table-cell;
+    vertical-align:middle;
+
+    
+    /* media queries */
+    @media #{$small-up} {
+        height: 9.0625rem;
+        width: 9.0625rem;
+    }
+
+    @media #{$medium-up} {
+        height: 12.1875rem;
+        width: 12.1875rem;
+    }
+}
+
+.ontario-smarties__circle-text abbr {
+    border-bottom: 2px dotted $ontario-white;
+}
+
+.ontario-smarties__circle-text--small {
+    font-size: 4rem;
+
+    /* media queries */
+    @media #{$small-only} {
+        font-size: 3.2rem;
+    }
+}
+
+.ontario-smarties__circle-text--large {
+    font-size: 2.4rem;
+
+    /* media queries */
+    @media #{$small-only} {
+        font-size: 1.8rem;
+    }
+}

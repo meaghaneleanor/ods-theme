@@ -126,32 +126,32 @@ p + ul {
 }
 
 /* bullet color variations */
-.ontario-list__bullet--fancy[bullet-color="ontario--list__bullet--fancy-blue"] li:before {
+.ontario-list__bullet--fancy[bullet-color="ontario-list__bullet--fancy-blue"] li:before {
     background-color: $ontario-fancy-list-bullet-blue;
 }
 
-.ontario-list__bullet--fancy[bullet-color="ontario--list__bullet--fancy-yellow"] li:before{
+.ontario-list__bullet--fancy[bullet-color="ontario-list__bullet--fancy-yellow"] li:before{
     background-color: $ontario-fancy-list-bullet-yellow;
     color: $ontario-black;
 }
 
-.ontario-list__bullet--fancy[bullet-color="ontario--list__bullet--fancy-orange"] li:before {
+.ontario-list__bullet--fancy[bullet-color="ontario-list__bullet--fancy-orange"] li:before {
     background-color: $ontario-fancy-list-bullet-orange;
 }
 
-.ontario-list__bullet--fancy[bullet-color="ontario--list__bullet--fancy-red"] li:before {
+.ontario-list__bullet--fancy[bullet-color="ontario-list__bullet--fancy-red"] li:before {
     background-color: $ontario-fancy-list-bullet-red;
 }
 
-.ontario-list__bullet--fancy[bullet-color="ontario--list__bullet--fancy-magenta"] li:before {
+.ontario-list__bullet--fancy[bullet-color="ontario-list__bullet--fancy-magenta"] li:before {
     background-color: $ontario-fancy-list-bullet-magenta;
 }
 
-.ontario-list__bullet--fancy[bullet-color="ontario--list__bullet--fancy-purple"] li:before {
+.ontario-list__bullet--fancy[bullet-color="ontario-list__bullet--fancy-purple"] li:before {
     background-color: $ontario-fancy-list-bullet-purple;
 }
 
-.ontario-list__bullet--fancy[bullet-color="ontario--list__bullet--fancy-green"] li:before {
+.ontario-list__bullet--fancy[bullet-color="ontario-list__bullet--fancy-green"] li:before {
     background-color: $ontario-fancy-list-bullet-green;
 }
 

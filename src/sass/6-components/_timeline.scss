@@ -1,0 +1,263 @@
+.ontario-timeline {
+    overflow: hidden;
+    position: relative;
+
+    /* media queries */
+    @media #{small-only} {
+        margin: 2rem 0;
+    }
+
+    @media #{$medium-up} {
+        margin: 3rem 0;
+    }
+
+    &::before {
+        background: $ontario-infographics-timeline-line-bg;
+        content: "";
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: calc(#{$ontario-infographic-component-padding--small} / 2);
+
+        /* &::before media queries */
+        @media #{$small-up} {
+            left: calc(#{$ontario-infographic-component-padding--small} * 2);
+        }
+        
+        @media #{$large-up} {
+            left: 50%;
+            margin-left: -.125rem;
+        }
+    }
+
+    &::after {
+        background-color: #d7e4ed;
+        content: "";
+        display: block;
+        height: $ontario-standard-component-padding;
+        width: calc(#{$ontario-standard-component-padding} * 3);
+        width: 5rem;
+        height: $ontario-standard-component-padding;  
+
+        /* &::after media queries */
+        @media #{$small-up} {
+            width: calc(#{$ontario-standard-component-padding} * 3);
+        }
+
+        @media #{$large-up} {
+            width: 5rem;
+            margin: 5em auto 0;
+        }
+    }
+}
+
+/* 
+    Timeline Date Section:
+    This refers to an entry within a timeline - this includes both the 
+    timeline date and timeline main content
+*/
+.ontario-timeline__entry-section {
+    margin: 2.5em 0;
+    overflow: hidden;
+    position: relative;
+
+    &:first-child {
+        margin-top: 0; /* removes top margin off very first timeline section entry */
+    }
+
+    &:last-child {
+        margin-bottom: 0; /* removes bototm margin off very last timeline section entry */
+    }
+}
+
+/* 
+    These styles target the date text in the even-numbered timeline 
+    entries of the timeline (ex: 2nd entry, 4th entry, etc.)
+*/ 
+.ontario-timeline__entry-section:nth-of-type(even) .ontario-timeline__date {
+    float: left;
+    left: auto;
+    
+    /* media queries */
+    @media #{$small-up} {
+        left: 0;
+    }
+
+    @media #{$large-up} {
+        right: 55%;
+        text-align: right;
+    }
+}
+
+/* 
+    These styles target the  main content (timeline title and information)
+    in the even-numbered timeline entries of the timeline (ex: 2nd entry, 4th entry, etc)
+*/ 
+.ontario-timeline__entry-section:nth-of-type(even) .ontario-timeline__main-content {
+    float: right;
+
+    /* 
+        These styles target the blue arrow on the main content entry pointing towards
+        the timeline
+    */
+    &::before {
+        border-color: transparent;
+        border-right-color: $ontario-infographics-timeline-light-blue;
+        left: auto;
+        right: 100%;
+        top: 10px;
+    }
+}
+
+/* 
+    These styles target the date text in the odd-numbered timeline 
+    entries of the timeline (ex: 1st entry, 3rd entry, etc.)
+*/ 
+.ontario-timeline__entry-section:nth-of-type(odd) .ontario-timeline__date {
+    /* media queries */
+    @media #{$small-up} {
+        float: left;
+    }
+
+    @media #{$large-up} {
+        float: right;
+        left: 49%;
+    }
+}
+
+/* 
+    These styles target the  main content (timeline title and information)
+    in the odd-numbered timeline entries of the timeline (ex: 1st entry, 3rd entry, etc.)
+*/ 
+.ontario-timeline__entry-section:nth-of-type(odd) .ontario-timeline__main-content {
+    /* media queries */
+    @media #{$small-up} {
+        float: right;
+
+        /* 
+            These styles target the blue arrow on the main content entry pointing towards
+            the timeline
+        */
+        &::before {
+            border-color: transparent;
+            border-right-color: $ontario-infographics-timeline-light-blue;
+            left: auto;
+            right: 100%;
+            top: 10px;
+        }
+    }
+    
+    @media #{$large-up} {
+        float: left;
+        
+        /* 
+            These styles target the blue arrow on the main content entry pointing towards
+            the timeline - for large screens the odd and even numbered entries face different 
+            directions
+        */
+        &::before {
+            left: 100%;
+            right: auto;
+            -webkit-transform: rotate(180deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+            -ms-transform: rotate(180deg); /* IE 9 */
+            transform: rotate(180deg); /* IE 10, Fx 16+, Op 12.1+ */
+        }
+    }
+}
+
+/* 
+    These styles target the date text for a single timeline entry 
+*/
+.ontario-timeline__date {
+    line-height: 1.5;
+    position: absolute;
+    top: 0;
+    color: $ontario-font-color-dark;
+    font-size: 1.3rem;
+    line-height: 1;
+    margin: 0 0 .5em 2em;
+
+    /* media queries */
+    @media #{$small-up} {
+        margin: .3em 0 1.5em 3em;
+    }
+
+    @media #{$large-up} {
+        margin: 0 0 .5em 2em;
+    } 
+}
+
+/* 
+    These styles target the  main content (timeline title and information)
+    in a timeline section entry
+*/ 
+.ontario-timeline__main-content {
+    background: $ontario-infographics-timeline-light-blue;
+    border-radius: .25rem;
+    color: $ontario-font-color-dark;
+    float: left;
+    margin-left: 0;
+    padding: 1rem;
+    position: relative;
+
+    /* media queries */
+    @media #{$small-up} {
+        margin: 3rem 0 0 4em;
+        float: left;
+        left: 0;
+    }
+
+    @media #{$large-up} {
+        margin: 0 0;
+        width: 45%;
+    }
+
+    /* 
+        These styles target the blue arrow on the main content entry pointing towards
+        the timeline
+    */
+    &::before {
+        border: 7px solid transparent;
+        border-bottom: 7px solid $ontario-infographics-timeline-light-blue;
+        content: '';
+        height: 0;
+        left: rem-calc(28px);
+        position: absolute;
+        top: -12px;
+        width: 0;
+        border-color: transparent;
+        border-left-color: $ontario-infographics-timeline-light-blue;
+        top: rem-calc(10px);
+    }
+}
+
+.ontario-timeline__main-content h3 {
+    @extend h4;
+}
+
+.ontario-timeline__main-content p {
+    margin-bottom: 1.25rem;
+}
+
+
+/* 
+    These styles target the circle in the middle of the timeline
+    that indicates a single timeline section entry 
+*/
+.ontario-timeline__date-stamp-circle {
+    border-radius: 50%;
+    height: 2.1875rem;
+    position: absolute;
+    top: 0;
+    width: 2.1875rem;
+    
+    /* media queries */
+    @media #{$large-up} {
+        left: 50.1%;
+        margin-left: -18px;   
+    }
+
+    @media #{$medium-only, $small-only} {
+        left: .75%;
+    }
+}

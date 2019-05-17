@@ -17,6 +17,7 @@
 
 .ontario-full-width {
   position: relative;
+  
   &:before, &:after {
     content: "";
     position: absolute;
@@ -25,14 +26,137 @@
     background: inherit;
     height: inherit;
   }
+
   &:before {
     width: 100vw;
     right: 100%;
     border: inherit;
   }
+
   &:after {
     width: 100vw;
     left: 100%;
     border: inherit;
+  }
+}
+
+/* flexbox */
+.ontario-flexbox__container--row {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row; 
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap; 
+  
+}
+
+.ontario-flexbox__container--column {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;  
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap; 
+}
+
+.ontario-flexbox__container--justify-center {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center; 
+}
+
+.ontario-flexbox__container--justify-start {
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start; 
+}
+
+.ontario-flexbox__container--justify-end {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end; 
+}
+
+.ontario-flexbox__container--justify-around {
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around; 
+}
+
+.ontario-flexbox__container--justify-between {
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between; 
+}
+
+// for flex rows of two items
+.ontario-flexbox-child--half {
+  width: 50%;
+
+  @media #{$small-only} {
+    width: 100%;
+  }
+}
+
+// for flex rows of three items
+.ontario-flexbox-child--third {
+  width: 33.3%;
+
+  @media #{$small-only} {
+    width: 100%;
+  }
+}
+
+// for flex rows of four items
+.ontario-flexbox-child--fourth {
+  width: 25%;
+
+  @media #{$small-only} {
+    width: 100%;
+  }
+}
+
+// for flex rows of five items
+.ontario-flexbox-child--fifth {
+  width: 20%;
+
+  @media #{$small-only} {
+    width: 100%;
+  }
+}
+
+// for flex rows of six items
+.ontario-flexbox-child--sixth {
+  width: 15%;
+
+  @media #{$small-only} {
+    width: 100%;
   }
 }

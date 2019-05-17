@@ -1,0 +1,31 @@
+.ontario-image--round {
+    border-radius: 50%;
+    shape-outside: circle(50%);
+}
+
+/* 
+    These  styles are only applied to figcaptions whose sibling element
+    is an image with a class of 'ontario-image--round'. 
+    This is to allow for captions to sit on top of rounded images
+*/ 
+.ontario-image--round + figcaption {
+    bottom: 10%;
+    position: absolute;
+    z-index: 10;
+}
+
+/* -------------------
+    Helper Classes      
+------------------- */
+/* 
+    This class is added to figure elements that contain rounded images,
+    to ensure the child figcaption element is positioned absolutely
+    to the containing figure
+*/ 
+.ontario-figure--has-round-image {
+    position: relative;
+}
+
+.ontario-image--full-width {
+    width: 100%;
+}

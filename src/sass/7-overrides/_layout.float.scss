@@ -1,3 +1,37 @@
+.ontario-float-left {
+    float: left;
+    margin: 0 1.5em 1em 0;
+
+    @media #{$small-only} {
+        float: none;
+        margin: 0;
+    }
+
+}
+
 .ontario-float-right {
     float: right;
+    margin: 0 0 1em 1.5em;
+
+    @media #{$small-only} {
+        float:none;
+        margin: 0;
+    }
+}
+
+/* 
+    These  styles are applied to any element whose sibling element
+    has a class of 'ontario-float-left' or 'ontario-float-right'. 
+    This is for responsive purposes to prevent floated elements
+    from being illegible at small screen sizes
+*/ 
+.ontario-float-left + *,
+.ontario-float-right + *{
+    @media #{$small-only} {
+        clear: both;
+    }
+}
+
+.ontario-clear-floats {
+    clear: both;
 }

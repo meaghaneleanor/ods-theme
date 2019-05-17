@@ -1,0 +1,26 @@
+.ontario-skittles__container {
+    @extend .infographics__container;
+}
+
+.ontario-skittles__item {
+    padding: $ontario-infographic-component-padding--small;
+    text-align: center;
+
+    /* media queries */
+    @media #{$small-only} {
+        padding: 0 $ontario-standard-component-padding calc(#{$ontario-standard-component-padding} * 2);
+        margin-bottom: $ontario-infographic-component-padding--small;
+    }
+}
+
+.ontario-skittles__item p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.ontario-skittles__circle {
+    border-radius: 50%;
+    height: 4.0625rem;
+    margin: 1rem auto .5rem;
+    width: 4.0625rem;
+}
