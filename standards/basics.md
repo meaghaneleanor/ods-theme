@@ -63,7 +63,7 @@ Avoid using `@extend` (except in cases of applying the Foundation settings) in y
   // baseline styles that apply to all variants
   margin: 1rem;
   padding: 0.5rem;
-  font-size: $ods-body-font-size;
+  font-size: $ontario-body-font-size;
   display: block;
 }
 
