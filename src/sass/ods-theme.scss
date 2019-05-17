@@ -37,6 +37,7 @@ $assetsDir: '../assets' !default;
 @import "./6-components/form-select";
 @import "./6-components/form-textarea";
 @import "./6-components/form-fieldset";
+@import "./6-components/images";
 
 @import "./7-overrides/layout.float";
 
@@ -44,7 +45,7 @@ $assetsDir: '../assets' !default;
   @extend .button;
 }
 
-.ods-list--no-bullet {
+.ontario-list--no-bullet {
   list-style: none;
   margin-left: 0;
 }
