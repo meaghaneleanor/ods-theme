@@ -1,0 +1,90 @@
+/* --------------------------------
+    Generic Infographic Styles     
+----------------------------------- */
+.infographics__container {
+    font-size: 1.2rem;
+    font-weight: 700;
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+}
+
+/* --------------------------------
+    Infographics Color Variations      
+----------------------------------- */
+/* background colors */
+.ontario-infographics__bg--medium-blue {
+    background: $ontario-infographics-blue-bg;
+    color: $ontario-font-color-light;
+}
+
+.ontario-infographics__bg--light-blue {
+    background: $ontario-infographics-light-blue-bg;
+    color: $ontario-font-color-dark;
+}
+
+.ontario-infographics__bg--dark-green {
+    background: $ontario-infographics-dark-green-bg;
+    color: $ontario-font-color-light;
+}
+
+.ontario-infographics__bg--medium-green {
+    background: $ontario-infographics-medium-green-bg;
+    color: $ontario-font-color-light;
+}
+
+.ontario-infographics__bg--light-green {
+    background: $ontario-infographics-light-green-bg;
+    color: $ontario-font-color-dark;
+}
+
+.ontario-infographics__bg--magenta {
+    background: $ontario-infographics-magenta-bg;
+    color: $ontario-font-color-light;
+}
+
+.ontario-infographics__bg--light-magenta {
+    background: $ontario-infographics-light-magenta-bg;
+    color: $ontario-font-color-dark;
+}
+
+.ontario-infographics__bg--yellow {
+    background: $ontario-infographics-yellow-bg;
+    color: $ontario-font-color-dark;
+}
+
+.ontario-infographics__bg--light-yellow {
+    background: $ontario-infographics-light-yellow-bg;
+    color: $ontario-font-color-dark;
+}
+
+.ontario-infographics__bg--red {
+    background: $ontario-infographics-red-bg;
+    color: $ontario-font-color-light;
+}
+
+.ontario-infographics__bg--light-orange {
+    background: $ontario-infographics-light-orange-bg;
+    color: $ontario-font-color-dark;
+}
+
+.ontario-infographics__bg--aqua {
+    background: $ontario-infographics-aqua-bg;
+}
+
+/* text colors */
+.ontario-infographics__text--blue {
+    color: $ontario-infographics-blue-bg;
+}
+
+.ontario-infographics__text--magenta {
+    color:  $ontario-infographics-magenta-bg;
+}
+
+.ontario-infographics__text--dark-green {
+    color: $ontario-infographics-dark-green-bg;
+}
+
+.ontario-infographics__text--red {
+    color: $ontario-infographics-red-bg;
+}

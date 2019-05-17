@@ -24,6 +24,7 @@ $assetsDir: '../assets' !default;
 @import "./5-objects/icons";
 @import "./5-objects/layout";
 @import "./5-objects/visibility";
+@import "./5-objects/infographics";
 
 @import "./6-components/header.main";
 @import "./6-components/footer.main";
@@ -37,9 +38,15 @@ $assetsDir: '../assets' !default;
 @import "./6-components/form-select";
 @import "./6-components/form-textarea";
 @import "./6-components/form-fieldset";
+@import "./6-components/smarties";
+@import "./6-components/skittles";
+@import "./6-components/factblock";
+@import "./6-components/timeline";
+@import "./6-components/speech-bubble";
 @import "./6-components/images";
 
 @import "./7-overrides/layout.float";
+
 
 .ontario-button {
   @extend .button;
