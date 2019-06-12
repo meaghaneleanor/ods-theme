@@ -1,3 +1,9 @@
+html {
+  font-family: $body-font-family;
+  font-size: 1rem;
+  color: #4d4d4d;
+}
+
 body {
   color: $ontario-font-color;
   cursor: auto;
@@ -11,22 +17,60 @@ body {
 a {
   text-decoration: none;
 
-  &:hover, 
+  &:hover,
   &:active {
     text-decoration: underline;
   }
 }
 
+p {
+  font-size: inherit;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+}
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 700;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-family: $header-font-family;
+}
+
 h1 {
   @include ontario-header-calc('h1');
+  letter-spacing: 0.04rem;
 }
 
 h2 {
   @include ontario-header-calc('h2');
+  letter-spacing: 0.02rem;
 }
 
 h3 {
   @include ontario-header-calc('h3');
+  letter-spacing: 0.02rem;
 }
 
 h4 {

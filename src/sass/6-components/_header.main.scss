@@ -5,29 +5,21 @@
   margin-bottom: 1.5rem;
 }
 
-.ontario-main-header__logo {
-  @extend .ontario-grid-cell;
-  @extend .small-5;
-  @extend .medium-3;
-  a:hover {
-    text-decoration: none;
+.ontario-main-header__logo-image {
+  margin: 0 1.25rem 1.25rem 0;
+  display: block;
+  width: 153.983px;
+
+  @media #{$small-only} {
+    .header-logo {
+      margin: 0 1rem 1rem 0.0625rem;
+      width: 126.34px;
+    }
   }
 }
 
 .ontario-main-header__search {
-  @extend .ontario-grid-cell;
-  @extend .medium-5;
-  @extend .large-6;
-
   padding: 0 0.5rem; // @todo - move this somewhere into a var
-}
-
-.ontario-main-header__site-nav {
-  @extend .ontario-grid-cell;
-  @extend .small-7;
-  @extend .medium-4;
-  @extend .large-3;
-
 }
 
 .ontario-main-search__text-entry {
@@ -36,17 +28,22 @@
 
 .ontario-site-nav__nav-toggle {
   color: #fff;
-  line-height: 2rem;
-  padding: .2rem .7rem;
+
   margin: 0 0 0 1.5rem;
   border: 0;
   text-transform: uppercase;
 }
 
+.ontario-main-header .ontario-site-nav__nav-toggle {
+  padding: .2rem .7rem;
+  line-height: 2rem;
+  box-shadow: none;
+}
+
 .ontario-site-nav__translation-link {
   font-size: $small-font-size;
   color: white;
-  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   line-height: 1.5;
   &:hover {
     color: white;

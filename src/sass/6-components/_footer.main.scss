@@ -42,21 +42,3 @@
 .ontario-main-footer__notice-links {
   font-size: $small-font-size;
 }
-
-.ontario-main-footer__swoosh-bg {
-  background: url('#{$assetsDir}/footer-swoosh-bg.png') $ontario-footer-bg repeat-x top;
-  width: 100%;
-  height: 96px;
-
-}
-
-
-
-.ontario-main-footer__swoosh-right {
-  display: block;
-  width: 560px;
-  height: 96px;
-  position: absolute;
-  right: 0;
-  background: url('#{$assetsDir}/footer-swoosh-right.png') $ontario-footer-bg no-repeat top right;
-}

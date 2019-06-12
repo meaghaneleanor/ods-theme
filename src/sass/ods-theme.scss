@@ -5,13 +5,13 @@
 
 ----------------------------------------------------------------------------- */
 $fontDir: '../fonts' !default;
-$assetsDir: '../assets' !default;
 
 @import 'node_modules/foundation-sites/scss/foundation';
 
 @import "./1-settings/foundation.settings";
 @import "./1-settings/colours.global";
 @import "./1-settings/spacing.global";
+@import "./1-settings/typography.global";
 
 @import "./2-tools/foundation.includes";
 @import "./2-tools/mixins.global";
