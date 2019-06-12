@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'Open Sans';
   font-weight: 600;
-  font-style: bold;
+  font-style: normal;
   src: url('#{$fontDir}/Open-Sans-600/Open-Sans-600.eot');
   src: url('#{$fontDir}/Open-Sans-600/Open-Sans-600.eot?#iefix') format('embedded-opentype'),
     local('Open Sans Semibold'),
@@ -44,26 +44,82 @@
   font-family: 'Raleway';
   font-weight: 400;
   font-style: normal;
-  src: url('#{$fontDir}/Raleway-regular/Raleway-regular.eot');
-  src: url('#{$fontDir}/Raleway-regular/Raleway-regular.eot?#iefix') format('embedded-opentype'),
+  src: url('#{$fontDir}/Raleway/Raleway-regular.eot');
+  src: url('#{$fontDir}/Raleway/Raleway-regular.eot?#iefix') format('embedded-opentype'),
     local('Raleway'),
     local('Raleway-regular'),
-    url('#{$fontDir}/Raleway-regular/Raleway-regular.woff2') format('woff2'),
-    url('#{$fontDir}/Raleway-regular/Raleway-regular.woff') format('woff'),
-    url('#{$fontDir}/Raleway-regular/Raleway-regular.ttf') format('truetype'),
-    url('#{$fontDir}/Raleway-regular/Raleway-regular.svg#Raleway') format('svg');
+    url('#{$fontDir}/Raleway/Raleway-regular.woff2') format('woff2'),
+    url('#{$fontDir}/Raleway/Raleway-regular.woff') format('woff'),
+    url('#{$fontDir}/Raleway/Raleway-regular.ttf') format('truetype'),
+    url('#{$fontDir}/Raleway/Raleway-regular.svg#Raleway') format('svg');
 }
 
 @font-face {
   font-family: 'Raleway';
   font-weight: 700;
   font-style: normal;
-  src: url('#{$fontDir}/Raleway-700/Raleway-700.eot');
-  src: url('#{$fontDir}/Raleway-700/Raleway-700.eot?#iefix') format('embedded-opentype'),
+  src: url('#{$fontDir}/Raleway/Raleway-700.eot');
+  src: url('#{$fontDir}/Raleway/Raleway-700.eot?#iefix') format('embedded-opentype'),
      local('Raleway Bold'),
      local('Raleway-700'),
-     url('#{$fontDir}/Raleway-700/Raleway-700.woff2') format('woff2'),
-     url('#{$fontDir}/Raleway-700/Raleway-700.woff') format('woff'),
-     url('#{$fontDir}/Raleway-700/Raleway-700.ttf') format('truetype'),
-     url('#{$fontDir}/Raleway-700/Raleway-700.svg#Raleway') format('svg');
+     url('#{$fontDir}/Raleway/Raleway-700.woff2') format('woff2'),
+     url('#{$fontDir}/Raleway/Raleway-700.woff') format('woff'),
+     url('#{$fontDir}/Raleway/Raleway-700.ttf') format('truetype'),
+     url('#{$fontDir}/Raleway/Raleway-700.svg#Raleway') format('svg');
+}
+
+@font-face {
+  font-family: 'Rawline';
+  font-weight: 400;
+  font-style: normal;
+  src: url('#{$fontDir}/Rawline/rawline-400.eot');
+  src: url('#{$fontDir}/Rawline/rawline-400.eot?#iefix') format('embedded-opentype'),
+    local('Raleway'),
+    local('Raleway-regular'),
+    url('#{$fontDir}/Rawline/rawline-400.woff2') format('woff2'),
+    url('#{$fontDir}/Rawline/rawline-400.woff') format('woff'),
+    url('#{$fontDir}/Rawline/rawline-400.ttf') format('truetype'),
+    url('#{$fontDir}/Rawline/rawline-400.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Rawline';
+  font-weight: 400;
+  font-style: italic;
+  src: url('#{$fontDir}/Rawline/rawline-400i.eot');
+  src: url('#{$fontDir}/Rawline/rawline-400i.eot?#iefix') format('embedded-opentype'),
+    local('Raleway'),
+    local('Raleway-regular'),
+    url('#{$fontDir}/Rawline/rawline-400i.woff2') format('woff2'),
+    url('#{$fontDir}/Rawline/rawline-400i.woff') format('woff'),
+    url('#{$fontDir}/Rawline/rawline-400i.ttf') format('truetype'),
+    url('#{$fontDir}/Rawline/rawline-400i.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Rawline';
+  font-weight: 700;
+  font-style: normal;
+  src: url('#{$fontDir}/Rawline/rawline-700.eot');
+  src: url('#{$fontDir}/Rawline/rawline-700.eot?#iefix') format('embedded-opentype'),
+     local('Raleway Bold'),
+     local('Raleway-700'),
+     url('#{$fontDir}/Rawline/rawline-700.woff2') format('woff2'),
+     url('#{$fontDir}/Rawline/rawline-700.woff') format('woff'),
+     url('#{$fontDir}/Rawline/rawline-700.ttf') format('truetype'),
+     url('#{$fontDir}/Rawline/rawline-700.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Rawline';
+  font-weight: 700;
+  font-style: italic;
+  src: url('#{$fontDir}/Rawline/rawline-700i.eot');
+  src: url('#{$fontDir}/Rawline/rawline-700i.eot?#iefix') format('embedded-opentype'),
+     local('Raleway Bold'),
+     local('Raleway-700'),
+     url('#{$fontDir}/Rawline/rawline-700i.woff2') format('woff2'),
+     url('#{$fontDir}/Rawline/rawline-700i.woff') format('woff'),
+     url('#{$fontDir}/Rawline/rawline-700i.ttf') format('truetype'),
+     url('#{$fontDir}/Rawline/rawline-700i.svg') format('svg');
 }
