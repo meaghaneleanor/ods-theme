@@ -1,3 +1,26 @@
+/* -------------------------------
+    Button Variables
+--------------------------------- */
+
+$ontario-button-box-shadow-color: $ontario-medium-gray;
+$ontario-button-primary-bg: $ontario-primary-blue;
+$ontario-button-primary--hover-bg: #0083c4;
+$ontario-button-secondary-bg: #d1ddeb;
+$ontario-button-secondary--hover-bg: #b2c6de;
+$ontario-button-alert-bg: #9d2f00;
+$ontario-button-alert--hover-bg: #b93700;
+$ontario-button-disabled-bg: $ontario-light-gray;
+
+
+
+/* -------------------------------
+    Button Classes
+--------------------------------- */
+
+.ontario-button {
+  @extend .button;
+}
+
 .ontario-button,
 input.ontario-button,
 input[type="submit"] {

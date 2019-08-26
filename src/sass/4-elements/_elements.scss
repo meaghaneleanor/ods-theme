@@ -1,7 +1,11 @@
+/* -------------------------------
+    Unclassed Elements
+--------------------------------- */
+
 html {
   font-family: $body-font-family;
+  color: $ontario-font-color;
   font-size: 1rem;
-  color: #4d4d4d;
 }
 
 body {
@@ -13,6 +17,11 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
 }
+
+
+/* -------------------------------
+    Typography
+--------------------------------- */
 
 a {
   text-decoration: none;
@@ -102,13 +111,21 @@ h4 abbr {
   color: $ontario-light-gray;
 }
 
-small,
-.small {
+small {
   font-size: .9375rem;
 }
 
-input[type="checkbox"], 
-input[type="date"], 
+abbr,
+abbr[title] {
+  border-bottom: 2px dotted $ontario-abbreviation-color;
+}
+
+/* -------------------------------
+          Forms
+--------------------------------- */
+
+input[type="checkbox"],
+input[type="date"],
 input[type="datetime-local"],
 input[type="datetime"], 
 input[type="email"], 
@@ -147,10 +164,9 @@ select:required {
   margin: 0;
 }
 
-abbr, 
-abbr[title] {
-  border-bottom: 2px dotted $ontario-abbreviation-color;
-}
+/* -------------------------------
+    Tables
+--------------------------------- */
 
 table {
   border: 0 none transparent;
@@ -173,6 +189,11 @@ table caption {
   text-align: center;
 }
 
+
+/* -------------------------------
+    Figures and Images
+--------------------------------- */
+
 figcaption {
   background: $ontario-lightest-gray;
   margin-bottom: 1rem;
@@ -181,4 +202,39 @@ figcaption {
 
 figcaption p:last-of-type {
   margin-bottom: 0;
+}
+
+
+/* -------------------------------
+    Lists
+--------------------------------- */
+
+ol,
+ul {
+    padding-left: 2em;
+    margin-bottom: 1.25rem;
+}
+
+ol ul,
+ul ul {
+    list-style-type: circle;
+}
+
+dl dt {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+dl dd {
+    margin-bottom: .75rem;
+}
+
+/*
+    This is targeting any unordered/ordered list that has a paragraph
+    as a sibling. This is to mimimize the space between a paragraph
+    with a list next to it.
+*/
+p + ol,
+p + ul {
+    margin-top: -.75em;
 }

@@ -1,3 +1,7 @@
+/* -------------------------------
+    Foundation Grid Decorators
+--------------------------------- */
+
 .ontario-grid-container {
   @extend .grid-container;
   padding: 0 .9375rem;
@@ -14,6 +18,11 @@
 .ontario-show-for-medium {
   @extend .show-for-medium;
 }
+
+
+/* -------------------------------
+    Full Width Layout
+--------------------------------- */
 
 .ontario-full-width {
   position: relative;
@@ -40,7 +49,10 @@
   }
 }
 
-/* flexbox */
+/* -------------------------------
+    Flexbox
+--------------------------------- */
+
 .ontario-flexbox__container--row {
   display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -55,8 +67,8 @@
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
-  flex-wrap: wrap; 
-  
+  flex-wrap: wrap;
+
 }
 
 .ontario-flexbox__container--column {
