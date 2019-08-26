@@ -1,7 +1,22 @@
-.ontario-form {
-    font-size: 1rem;
-}
+/* -------------------------------
+    Form Variables
+--------------------------------- */
+$ontario-form-input-border-color: #ccc;
+$ontario-form-input-box-shadow-color: $ontario-gray-10;
+$ontario-form-input--focus-bg: #fff2c4;
+$ontario-form-fieldset-bg: hsla(0,0%,100%,.6);
+$ontario-form-select-bg: #fafafa;
+$ontario-form-input-font-color: $ontario-gray-75;
 
-.ontario-form__wrapper--clear-input {
-    position: relative;
-}
+
+
+/* -------------------------------
+    Form Partials
+--------------------------------- */
+
+@import "./form/form.general";
+@import "./form/form.label";
+@import "./form/form.input";
+@import "./form/form.select";
+@import "./form/form.textarea";
+@import "./form/form.fieldset";

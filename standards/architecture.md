@@ -15,28 +15,26 @@ In addition to BEM, this theme follows Harry Roberts' [Inverted Triangle CSS](ht
 The code is broken out into 7 sections:
 
 1. **Settings**
-Global variables like font sizes, colour variables, etc. Settings for vendor frameworks like Foundation would also go here.
+Global variables like font sizes, colour variables, etc. This includes settings for vendor frameworks like Foundation. If you would like to define variables for re-use in a specific component, please keep it local to that component file, for ease of future maintenance.
 
 Note: these files should not generate actual CSS.
 
 2. **Tools**
-Globally available mixins, functions, etc.
+Globally available mixins, functions, etc. Like with settings, if you would like to define a mixin that will only be used in one component, please keep it in that component file.
 
 Note: these files should not generate actual CSS.
 
 3. **Generics**
-High level and far-reaching styles that should be minimally modified once they have been defined, such as resets, box model rules, etc.
+High level and far-reaching styles that should be minimally modified once they have been defined. This layer will probably look the same for every project you work on.
 
 4. **Elements**
 Bare unclassed HTML elements. These should only be element-level selectors, **not** classes or ids.
 
 5. **Objects**
-Non-cosmetic design patterns, such as wrappers, containers, layout systems, etc. Selectors here should have at most one class.
+Non-structured design patterns, such as wrappers, containers, layout systems, typography, and media. Selectors here should have at _most_ one class.
 
 6. **Components**
-Recognizable design patterns and UI pieces. Selectors here should have at least one class.
-
-Note: Within Vue's component system, some of these styles may be contained within individual components. A good general rule of thumb: if deleting a Vue component requires deleting that style, that style should live within the component. However, consider whether you need to apply snowflake styles to that Vue component, or whether you should be reusing existing patterns
+Recognizable design patterns and UI pieces. Selectors here should have at _least_ one class.
 
 7. **Overrides**
 Helper classes that should override all other patterns, for specific behaviours such as clearfixing, text alignment, etc.

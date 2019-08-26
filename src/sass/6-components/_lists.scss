@@ -1,39 +1,31 @@
-/* ---------------
-    Generics
---------------- */
-ol,
-ul {
-    padding-left: 2em;
-    margin-bottom: 1.25rem;
+/* -------------------------------
+    List Variables
+--------------------------------- */
+
+$ontario-fancy-list-bullet-blue: #0087cb;
+$ontario-fancy-list-bullet-yellow: #FFC300;
+$ontario-fancy-list-bullet-orange: #F2671F;
+$ontario-fancy-list-bullet-red: #C91B26;
+$ontario-fancy-list-bullet-magenta: #9C0F5F;
+$ontario-fancy-list-bullet-purple: #60047A;
+$ontario-fancy-list-bullet-green: #008B52;
+
+/* -------------------------------
+    List Classes
+--------------------------------- */
+
+.ontario-list--no-bullet {
+  list-style: none;
+  margin-left: 0;
 }
 
-ol ul,
-ul ul {
-    list-style-type: circle;
+.ontario-list--inline {
+  li {
+    display: inline;
+    margin-right: 1.25rem;
+  }
 }
 
-dl dt {
-    margin-bottom: 0;
-    font-weight: 700;
-}
-
-dl dd {
-    margin-bottom: .75rem;
-}
-
-/*
-    This is targeting any unordered/ordered list that has a paragraph
-    as a sibling. This is to mimimize the space between a paragraph
-    with a list next to it.
-*/
-p + ol,
-p + ul {
-    margin-top: -.75em;
-}
-
-/* -------------------
-    List Variations
--------------------- */
 /* lists with parentheses */
 .ontario-list__bullet--parentheses {
     counter-reset: a;
