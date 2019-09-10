@@ -1,0 +1,42 @@
+image: node:carbon
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - design
+  only:
+    - tags
+  script:
+    - npm install && npm run deploy
+  artifacts:
+    paths:
+      - dist
+
+deploy:
+  image: python:latest
+  stage: deploy
+  tags:
+    - design
+  only:
+    - tags
+  before_script:
+    - pip install awscli
+  script:
+    ## Create tarball of latest version, excluding node_modules and dist folders
+    - tar --exclude=./node_modules --exclude=./dist --exclude-vcs -czf ../project.tar.gz .
+
+    ## Copy tarball to a versioned folder
+    - aws s3 cp ../project.tar.gz s3://${DEV_S3_BUCKET}/${CI_PROJECT_NAME}/${CI_COMMIT_TAG}/${CI_PROJECT_NAME}-v${CI_COMMIT_TAG}.tar.gz
+
+    ## Copy latest minified CSS to a versioned folder
+    - aws s3 sync ./dist/css s3://${DEV_S3_BUCKET}/${CI_PROJECT_NAME}/css/${CI_COMMIT_TAG}/
+
+    ## Copy latest minified CSS to the "latest" folder
+    - aws s3 sync ./dist/css s3://${DEV_S3_BUCKET}/${CI_PROJECT_NAME}/css/latest/
+
+    ## Replace existing fonts folder with current fonts (this should not actually change files and is more a precaution)
+    - aws s3 sync ./dist/fonts s3://${DEV_S3_BUCKET}/${CI_PROJECT_NAME}/fonts --delete
