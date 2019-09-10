@@ -14,41 +14,66 @@ Run `npm run start` to start running gulp. This will watch `src/ods-theme.scss` 
 
 The ODS work is loosely based on the Block-Element-Modifier system of CSS architecture. Please refer to the `/standards/basics.md` for more guidance on how to develop for this repo.
 
+### Deployment
+
+This project uses Gitlab's CI/CD pipeline to generate versioned releases. In order to release a version, create a new tag in Gitlab. The tag name should be the **version number** only. If you're not sure what the current version should be, consult a senior developer on the project.
+
+Follow [semantic versioning](https://semver.org/) in your releases.
+
+After you've created the tag, go to the pipelines for this project and make sure it runs smoothly. The pipeline will compress everything in the project and drop it onto the corresponding AWS sandbox (see section on "Usage" below)
+
 ## Usage
 
-### Installation
+### npm
 
-For now, this repo lives in a private Gitlab repository. To access it, you have to create a [personal access token](https://git.ontariogovernment.ca/profile/personal_access_tokens) for your Gitlab. Then add this to your `package.json` and run `npm i`:
+To use this repo in a node project, add the following to your to your `package.json` and run `npm `i (replacing `TAG_NAME` with the version you want to install:
 
-`"ods-theme": "git+https://oauth2:<GITLAB_ACCESS_TOKEN>@git.ontariogovernment.ca/jenny.zhang/ods-theme.git",`
+`"ods-theme": "http://designsystem.ontariogovernment.ca/ods-theme/ods-theme-v<TAG_NAME>.tar.gz",`
 
-Note: This is just a temporary workaround while the CSS package is in a private repo. **Do not actually commit your Gitlab access token to the repo itself**!
+So, for example, a release tagged `0.0.5` would look like this:
 
-Alternatively, you can download the theme and point your `package.json` to your local relative directory:
+```http://designsystem.ontariogovernment.ca/ods-theme/ods-theme-v0.0.5.tar.gz```
+
+Once you've installed it, you can then tmport the root SASS component by importing it into your own SASS file with `@import "<ODS_THEME_DIRECTORY>/src/sass/ods-theme.scss";`
+
+Method #2 will give you access to the mixins, variables, and functions of the `ods-theme`, which you can then override or extend. Refer to the folder `src/tools` to see the ODS-specific variables and mixins that you can override or extend. Depending on how you are compiling your project, you can set up an alias for `ODS_THEME_DIRECTORY` to make it easier for you to import this file. Refer to `git.ontariogovernment.ca/jenny.zhang/minifront.git"` for an example of how to accomplish this.
+
+### CDN
+
+If you want to directly link to the minified CSS files and treat this like a CDN, you have the option of either linking directly to a versioned file or just accessing the `latest` release. You won't have access to the SASS mixins or variables, but you can override classes the way you can with regular CSS.
+
+A versioned file will follow this pattern:
+
+```http://designsystem.ontariogovernment.ca/ods-theme/css/<VERSION_NUMBER>/ods-theme.css```
+
+The latest file will follow this pattern:
+
+```http://designsystem.ontariogovernment.ca/ods-theme/css/latest/ods-theme.css```
+
+Versioned files are essentially historical archives and will never changed. `latest` versions will update every time there's a release.
+
+Each folder will have:
+
+```
+ods-theme.css
+ods-theme.map.css
+ods-theme.min.css
+ods-theme.min.map.css
+```
+There will also be a fonts folder that includes all the font assets:
+
+```http://designsystem.ontariogovernment.ca/ods-theme/css/fonts/```
+
+### Local development use
+
+You can download the theme and point your `package.json` to your local relative directory:
 
 `"ods-theme": "../ods-theme"`
 
 If you are working on the `ods-theme` repo at the same time as you are working on a project or application that is using it, this is the easiest way of testing that changes in one are reflected in the other. However, due to the way `npm` handles local repositories, this will create a symlink from the `node_modules` folder of your project directory to that relative theme directory. You may need to temporary adjust imports in `ods-theme.scss` while you're working locally.
 
-### CSS
+## JavaScript
 
-Once you have installed the repo, you can do one of two things:
+While this package relies on Foundation, it only exports and packages up CSS. If you want to use any of the Javascript modules provided by Foundation, refer to the [Foundation Sites Docs](https://foundation.zurb.com/sites.html) on how to import that manually.
 
-1. Include the compiled file CSS file in your project directly by referencing `node_modules/ods-theme/dist/css/ods-theme.min.css` in your HTML (or by copying the file to a `public` or `dist` folder)
-2. Import the root SASS component by importing it into your own SASS file with `@import "<ODS_THEME_DIRECTORY>/src/sass/ods-theme.scss";`
-
-Method #2 will give you access to the mixins, variables, and functions of the `ods-theme`, which you can then override or extend. Refer to the folder `src/tools` to see the ODS-specific variables and mixins that you can override or extend. Depending on how you are compiling your project, you can set up an alias for `ODS_THEME_DIRECTORY` to make it easier for you to import this file. Refer to `git.ontariogovernment.ca/jenny.zhang/minifront.git"` for an example of how to accomplish this.
-
-The SASS in the `ods-theme` project provides two variables for static assets, `$fontDir` and `$assetDir`. These are provided so that relative URL schemes within CSS (e.g. for font includes, background images, etc) can be kept flexible. By default they are set to `../fonts` and `../assets`, relative to the compiled CSS from the `dist` folder. If you want to work with the dynamic SASS components, set these variables to be relative from your project SASS file:
-
-`$assetsDir: '../../node_modules/ods-theme/src/assets';`
-
-Test your settings with both live development (e.g. with webpack hot reload) and with generating a static build.
-
-### JavaScript
-
-The `ods-theme` project exports the basic Foundation object along with all required modules, already attached to jQuery. Import the Foundation object with something like
-
-`import Foundation from 'ods-theme'`
-
-Refer to the [Foundation Sites Docs](https://foundation.zurb.com/sites.html) to see how to use and override Foundation settings. For using JS on a Vue project, refer to `git.ontariogovernment.ca/jenny.zhang/minifront.git"` for an example of how to create universal Foundation plugins.
+For using JS on a Vue project, refer to `git.ontariogovernment.ca/jenny.zhang/minifront.git"` for an example of how to create universal Foundation plugins.
