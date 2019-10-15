@@ -29,10 +29,13 @@ stages:
     - aws s3 cp ../project.tar.gz s3://${S3_DEPLOY_BUCKET}/${CI_PROJECT_NAME}/pkg/${CI_COMMIT_TAG}/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.gz
 
     ## Copy only minified CSS to a versioned folder
-    - aws s3 sync ./css s3://${S3_DEPLOY_BUCKET}/${CI_PROJECT_NAME}/css/${CI_COMMIT_TAG}/
+    - aws s3 sync ./dist/css s3://${S3_DEPLOY_BUCKET}/${CI_PROJECT_NAME}/css/${CI_COMMIT_TAG}/
 
     ## Replace existing fonts folder with current fonts (this should not actually change files and is more a precaution)
-    - aws s3 sync ./fonts s3://${S3_DEPLOY_BUCKET}/${CI_PROJECT_NAME}/fonts --delete
+    - aws s3 sync ./dist/fonts s3://${S3_DEPLOY_BUCKET}/${CI_PROJECT_NAME}/fonts --delete
+
+    ## Replace existing icons folder with current icons (this should not actually change files and is more a precaution)
+    - aws s3 sync ./dist/icons s3://${S3_DEPLOY_BUCKET}/${CI_PROJECT_NAME}/icons --delete
 
 .app_dev_conditions: &app_dev_condition_def
   only:
