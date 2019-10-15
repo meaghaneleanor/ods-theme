@@ -2,15 +2,6 @@
     Custom Onesite Icon Font
 --------------------------------- */
 
-@font-face {
-  font-family: 'onesite';
-  src: url('#{$fontDir}/onesite.ttf?opliym') format('truetype'),
-       url('#{$fontDir}/onesite.woff?opliym') format('woff'),
-       url('#{$fontDir}/onesite.svg?opliym#onesite') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .ontario-icon {
   font-family: 'onesite' !important;
   speak: none;
