@@ -4,9 +4,7 @@
   this project.
 
 ----------------------------------------------------------------------------- */
-$fontDir: '../fonts' !default;
-
-@import 'node_modules/foundation-sites/scss/foundation';
+@import '../../node_modules/foundation-sites/scss/foundation';
 
 @import "./1-settings/foundation.settings";
 @import "./1-settings/colours.global";
