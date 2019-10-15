@@ -10,102 +10,23 @@ $ontario-lightest-gray: #ededed;
 $ontario-white: #fff;
 $ontario-black: #000;
 
+$ontario-gray-10: rgba(0,0,0,.1);
+$ontario-gray-25: rgba(0,0,0,.25);
+$ontario-gray-50: rgba(0,0,0,.5);
+$ontario-gray-75: rgba(0,0,0,.75);
+$ontario-gray-90: rgba(0,0,0,.9);
+
 /* ---------------
-    Generics       
+    Generics
 --------------- */
 $ontario-font-color: $body-font-color;
-$ontario-font-color-light: #fff;
+$ontario-font-color-light: $ontario-white;
 $ontario-font-color-dark: #333;
-$ontario-font-color-medium: #4d4d4d;
-
-$ontario-panel-dark--font-color: #fff;
-$ontario-panel-dark--link-color: #d1ddeb;
-
-$ontario-table--link-color: #d1ddeb;
-
-$ontario-form-input-font-color: rgba(0,0,0,.75);
+$ontario-font-color-medium: $ontario-dark-gray;
 
 /* ---------------
-    Elements       
+    Elements
 --------------- */
 $ontario-abbreviation-color: #999;
 $ontario-link-color: $anchor-color;
-
-/* ---------------
-    Components       
---------------- */
-/* header */
-$ontario-header-bg: #333;
-
-/* footer */
-$ontario-footer-bg: #ededed;
-$ontario-footer-border-color: #d9d9d9;
-
-/* buttons */
-$ontario-button-box-shadow-color: #666;
-$ontario-button-primary-bg: #0071a9;
-$ontario-button-primary--hover-bg: #0083c4;
-$ontario-button-secondary-bg: #d1ddeb;
-$ontario-button-secondary--hover-bg: #b2c6de;
-$ontario-button-alert-bg: #9d2f00;
-$ontario-button-alert--hover-bg: #b93700;
-$ontario-button-disabled-bg: #737373;
-
-/* panels */
-$ontario-panel-border-color: rgba(0,0,0,.1);
-$ontario-panel-aside-bg: #f5f5f5;
-$ontario-panel-callout-bg: #dff3f3;
-$ontario-panel-warning-bg: #fafad2;
-$ontario-panel-success-bg: #e6fad2;
-$ontario-panel-error-bg: #fad2d2;
-$ontario-panel-dark-bg: #4d4d4d;
-
-/* labels */
-$ontario-label-default-bg: #ededed;
-$ontario-label-status-updated-bg: #fafad2;
-$ontario-label-status-open-bg: #e6fad2;
-$ontario-label-status-closed-bg: #fad2d2;
-$ontario-label-status-under-review-bg: #d2d1eb;
-$ontario-label-status-upcoming-bg: #dff3f3;
-$ontario-label-status-complete-bg: #006b3f;
-$ontario-label-status-implementing-bg: #8138b3;
-$ontario-label-status-inactive-bg: #666;
-$ontario-label-status-alert-bg: #c91b26;
-
-/* table */
-$ontario-table-tfoot-bg: #d1ddeb;
-$ontario-table-stripe-bg: #efefef;
-$ontario-label-font-color-dark: #4d4d4d;
-$ontario-label-font-color-light: #fff;
-
-/* forms */
-$ontario-form-input-border-color: #ccc;
-$ontario-form-input-box-shadow-color: rgba(0,0,0,.1);
-$ontario-form-input--focus-bg: #fff2c4; 
-$ontario-form-fieldset-bg: hsla(0,0%,100%,.6);
-$ontario-form-select-bg: #fafafa;
-
-/* lists */
-$ontario-fancy-list-bullet-blue: #0087cb;
-$ontario-fancy-list-bullet-yellow: #FFC300;
-$ontario-fancy-list-bullet-orange: #F2671F;
-$ontario-fancy-list-bullet-red: #C91B26;
-$ontario-fancy-list-bullet-magenta: #9C0F5F;
-$ontario-fancy-list-bullet-purple: #60047A;
-$ontario-fancy-list-bullet-green: #008B52;
-
-/* infographics */
-$ontario-infographics-timeline-line-bg: #d7e4ed;
-$ontario-infographics-timeline-light-blue: #dff3f3;
-$ontario-infographics-light-blue-bg: #d1ddeb;
-$ontario-infographics-blue-bg: #0087cb;
-$ontario-infographics-light-green-bg: #ddebd1;
-$ontario-infographics-medium-green-bg: rgb(123, 157, 0);
-$ontario-infographics-dark-green-bg: rgb(57, 130, 119);
-$ontario-infographics-light-magenta-bg: #ebd1ea;
-$ontario-infographics-magenta-bg: rgb(156, 15, 95);
-$ontario-infographics-light-yellow-bg: #fafad2;
-$ontario-infographics-yellow-bg: rgb(255, 195, 0);
-$ontario-infographics-red-bg: rgb(201, 27, 38);
-$ontario-infographics-light-orange-bg: #fae6d2;
-$ontario-infographics-aqua-bg: #d2fafa;
+$ontario-primary-blue: get-color(primary);

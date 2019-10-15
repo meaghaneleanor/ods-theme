@@ -4,10 +4,7 @@
   this project.
 
 ----------------------------------------------------------------------------- */
-$fontDir: '../fonts' !default;
-$assetsDir: '../assets' !default;
-
-@import 'node_modules/foundation-sites/scss/foundation';
+@import '../../node_modules/foundation-sites/scss/foundation';
 
 @import "./1-settings/foundation.settings";
 @import "./1-settings/colours.global";
@@ -17,57 +14,25 @@ $assetsDir: '../assets' !default;
 @import "./2-tools/mixins.global";
 
 @import "./3-generics/fonts";
+@import "./3-generics/boxModel";
 
-@import "./4-elements/_elements";
-@import "./4-elements/lists";
+@import "./4-elements/elements";
 
 @import "./5-objects/icons";
 @import "./5-objects/layout";
-@import "./5-objects/visibility";
-@import "./5-objects/infographics";
+@import "./5-objects/typography";
+@import "./5-objects/images";
 
-@import "./6-components/header.main";
-@import "./6-components/footer.main";
 @import "./6-components/button";
-@import "./6-components/panel";
-@import "./6-components/labels";
-@import "./6-components/tables";
+@import "./6-components/footer";
 @import "./6-components/form";
-@import "./6-components/form-label";
-@import "./6-components/form-input";
-@import "./6-components/form-select";
-@import "./6-components/form-textarea";
-@import "./6-components/form-fieldset";
-@import "./6-components/smarties";
-@import "./6-components/skittles";
-@import "./6-components/factblock";
-@import "./6-components/timeline";
-@import "./6-components/speech-bubble";
-@import "./6-components/images";
+@import "./6-components/header";
+@import "./6-components/infographics";
+@import "./6-components/labels";
+@import "./6-components/lists";
+@import "./6-components/panel";
+@import "./6-components/tables";
 
 @import "./7-overrides/layout.float";
-
-
-.ontario-button {
-  @extend .button;
-}
-
-.ontario-list--no-bullet {
-  list-style: none;
-  margin-left: 0;
-}
-
-.ontario-list--inline {
-  li {
-    display: inline;
-    margin-right: 1.25rem;
-  }
-}
-
-.ontario-margin--top-double {
-  margin-top: 2rem;
-}
-
-.ontario-padding--bottom-double {
-  padding-bottom: 2rem;
-}
+@import "./7-overrides/helpers.spacing";
+@import "./7-overrides/helpers.typography";

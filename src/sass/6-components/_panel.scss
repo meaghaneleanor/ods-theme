@@ -1,5 +1,23 @@
+/* -------------------------------
+    Panel Variables
+--------------------------------- */
+
+$ontario-panel-aside-bg: #f5f5f5;
+$ontario-panel-callout-bg: #dff3f3;
+$ontario-panel-warning-bg: #fafad2;
+$ontario-panel-success-bg: #e6fad2;
+$ontario-panel-error-bg: #fad2d2;
+$ontario-panel-dark-bg: $ontario-dark-gray;
+$ontario-panel-dark-font-color: $ontario-white;
+$ontario-panel-dark-link-color: #d1ddeb;
+
+
+/* -------------------------------
+    Panel Classes
+--------------------------------- */
+
 .ontario-panel {
-    border-color: $ontario-panel-border-color;
+    border-color: $ontario-gray-10;
     border-style: solid;
     border-width: 0 0 0 $ontario-standard-component-padding;
     color: $ontario-font-color-dark;
@@ -49,34 +67,34 @@ select:required + .ontario-panel-error {
 
 .ontario-panel--dark {
     background: $ontario-panel-dark-bg;
-    color: $ontario-panel-dark--font-color;
+    color: $ontario-panel-dark-font-color;
 }
 
 .ontario-panel--dark abbr,
 .ontario-panel--dark abbr[title] {
-    border-bottom: 2px dotted $ontario-panel-dark--link-color;
+    border-bottom: 2px dotted $ontario-panel-dark-link-color;
 }
 
 .ontario-panel--dark a,
 .ontario-panel--dark > abbr,
 .ontario-panel--dark >  abbr[title] {
-    color: $ontario-panel-dark--link-color;
+    color: $ontario-panel-dark-link-color;
     text-decoration: underline;
 
     &:hover,
-    &:focus {   
-        color: $ontario-panel-dark--font-color;
+    &:focus {
+        color: $ontario-panel-dark-font-color;
     }
 }
 
 .ontario-panel--error {
     background: $ontario-panel-error-bg;
 }
-    
+
 .ontario-panel--success {
     background: $ontario-panel-success-bg;
 }
-    
+
 .ontario-panel--warning {
     background: $ontario-panel-warning-bg;
 }

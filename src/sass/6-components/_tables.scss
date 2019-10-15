@@ -1,3 +1,18 @@
+/* -------------------------------
+    Table variables
+--------------------------------- */
+
+$ontario-table-tfoot-bg: #d1ddeb;
+$ontario-table-stripe-bg: #efefef;
+$ontario-label-font-color-dark: $ontario-dark-gray;
+$ontario-label-font-color-light: $ontario-white;
+$ontario-table-link-color: #d1ddeb;
+
+
+/* -------------------------------
+    Table classes
+--------------------------------- */
+
 .ontario-table {
     border-bottom-color: $ontario-lightest-gray;
 }
@@ -7,7 +22,7 @@
 }
 
 .ontario-table thead a {
-    color: lighten($ontario-table--link-color, 5%);
+    color: lighten($ontario-table-link-color, 5%);
     text-decoration: underline;
 
     &:hover {
