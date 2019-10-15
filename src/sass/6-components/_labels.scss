@@ -1,3 +1,24 @@
+/* -------------------------------
+    Label Variables
+--------------------------------- */
+
+$ontario-label-default-bg: $ontario-lightest-gray;
+$ontario-label-status-updated-bg: #fafad2;
+$ontario-label-status-open-bg: #e6fad2;
+$ontario-label-status-closed-bg: #fad2d2;
+$ontario-label-status-under-review-bg: #d2d1eb;
+$ontario-label-status-upcoming-bg: #dff3f3;
+$ontario-label-status-complete-bg: #006b3f;
+$ontario-label-status-implementing-bg: #8138b3;
+$ontario-label-status-inactive-bg: $ontario-medium-gray;
+$ontario-label-status-alert-bg: #c91b26;
+
+
+
+/* -------------------------------
+    Label Classes
+--------------------------------- */
+
 .ontario-label {
     background: $ontario-label-default-bg;
     border-radius: 3px;

@@ -1,0 +1,58 @@
+image: 608395931184.dkr.ecr.us-east-1.amazonaws.com/ci/centos/nodejs-10-centos7
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - design
+  script:
+    - npm install && npm run deploy
+  artifacts:
+    expire_in: 24 hrs
+    paths:
+      - dist
+  only:
+    refs:
+      - tags
+      - master
+    variables:
+      - $CI_COMMIT_TAG =~ /^v\d+.\d+.\d+$/
+  except:
+    refs:
+      - branches
+
+
+deploy:
+  image: 608395931184.dkr.ecr.us-east-1.amazonaws.com/ci/python-aws-cli:latest
+  stage: deploy
+  tags:
+    - design
+  only:
+    - tags
+  script:
+    ## Create tarball of latest version, excluding node_modules and dist folders
+    - tar --exclude=./node_modules --exclude=./dist --exclude=./.gitlab-ci.yml --exclude-vcs -czf ../project.tar.gz .
+
+    ## Copy tarball to a versioned folder
+    - aws s3 cp ../project.tar.gz s3://${BUILD_S3_BUCKET}/${CI_PROJECT_NAME}/${CI_COMMIT_TAG}/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.gz
+
+    ## Copy latest minified CSS to a versioned folder
+    - aws s3 sync ./dist/css s3://${BUILD_S3_BUCKET}/${CI_PROJECT_NAME}/css/${CI_COMMIT_TAG}/
+
+     ## Replace existing fonts folder with current fonts (this should not actually change files and is more a precaution)
+    - aws s3 sync ./dist/fonts s3://${BUILD_S3_BUCKET}/${CI_PROJECT_NAME}/fonts --delete
+
+  dependencies:
+    - build
+  only:
+    refs:
+      - tags
+      - master
+    variables:
+      - $CI_COMMIT_TAG =~ /^v\d+.\d+.\d+$/
+  except:
+    refs:
+      - branches

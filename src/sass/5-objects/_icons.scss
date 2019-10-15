@@ -1,13 +1,6 @@
-@font-face {
-  font-family: 'onesite';
-  src: url('#{$fontDir}/onesite.ttf?opliym') format('truetype'),
-       url('#{$fontDir}/onesite.woff?opliym') format('woff'),
-       url('#{$fontDir}/onesite.svg?opliym#onesite') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
+/* -------------------------------
+    Custom Onesite Icon Font
+--------------------------------- */
 
 .ontario-icon {
   font-family: 'onesite' !important;
@@ -24,10 +17,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ontario-icon--ontario-logo:before {
-  content: "\e97a";
-}
-
 .ontario-icon--size-medium {
   font-size: 1.2rem;
 }
@@ -36,152 +25,6 @@
   content: "\e970";
 }
 
-// [class^="icon-"], [class*=" icon-"] {
-//   font-family: 'onesite';
-//   @media aural {
-//     speak: none;
-//   }
-//   font-style: normal;
-//   font-weight: normal;
-//   font-variant: normal;
-//   text-transform: none;
-//   line-height: 1;
-
-//   /* Better Font Rendering =========== */
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
-
-// .iconRoundCorners, .iconRoundCornersNeg, .iconWrapper, .iconWrapperLong {
-//   float: left;
-//   margin: 0 .6rem .6rem 0;
-//   width: 2rem;
-//   height: 2rem;
-//   background-color: #fff;
-//   font-size: 2rem;
-//   line-height: 2rem;
-//   color: #999;
-// }
-
-// .iconWrapperLong {
-//   margin: 0 auto;
-//   width: 7rem;
-//   height: 2.3rem;
-//   font-size: 1.8rem;
-//   line-height: 2.4rem;
-//   text-align: center;
-//   color: #fff;
-//   background-color: #666;
-//   border-radius: .15rem;
-//   display: inline-block;
-// }
-
-// .iconRoundCorners, .iconRoundCornersNeg, .iconWrapper, .iconWrapperLong {
-//   position: relative;
-//   overflow: visible;
-// }
-
-
-
 .ontario-icon-contactLong:before {
   content: "\e922";
 }
-
-.ontario-icon-wrapper--long {
-  background: $ontario-light-gray;
-  color: $white;
-  border-radius: 0.15rem;
-  width: 7rem;
-  height: 2.3rem;
-  line-height: 2.3rem;
-  text-align: center;
-  font-size: 1.8rem;
-}
-
-// .icon-comment:before {
-//   content: "\e920";
-// }
-
-// .icon-commentDisc:before {
-//   content: "\e921";
-// }
-
-// .icon-check:before {
-//   content: "\e915";
-//   position: relative;
-//   left: 1px;
-//   margin-right: 3px;
-// }
-
-// .icon-cross:before {
-//   content: "\e923";
-//   position: relative;
-//   line-height: 1;
-//   // left: 1px;
-//   top: 1px;
-// }
-
-// .icon-email:before {
-//   content: "\e92d";
-// }
-
-// .icon-globe:before {
-//   content: "\e946";
-//   margin-right: 4px;
-// }
-
-// .icon-mail:before {
-//   content: "\e96d";
-// }
-
-// .icon-mention:before {
-//   content: "\e96f";
-//   margin-right: 4px;
-// }
-
-
-
-
-// .icon-phone:before {
-//   content: "\e97f";
-// }
-
-// .icon-phone2:before {
-//   content: "\e980";
-// }
-
-// .icon-print:before {
-//   content: "\e98c";
-// }
-
-// .icon-phoneFull:before {
-//   content: "\e982";
-// }
-
-// .icon-share:before {
-//   content: "\e99e";
-// }
-
-// .icon-shareFull:before {
-//   content: "\e99f";
-// }
-
-// .icon-tArrowDown:before {
-//   content: "\e9ac"
-// }
-
-// .icon-thumbsUpFull:before {
-//   content: "\e9b6";
-// }
-
-// .icon-thumbsDownFull:before {
-//     content: "\e9b4";
-// }
-
-// .icon-upArrow::before {
-//   content: "\e9bc";
-// }
-
-// .icon-calendar:before {
-//   content: "\e90f";
-// }

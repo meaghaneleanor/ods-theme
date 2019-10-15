@@ -1,3 +1,13 @@
+/* -------------------------------
+    Unclassed Elements
+--------------------------------- */
+
+html {
+  font-family: $body-font-family;
+  color: $ontario-font-color;
+  font-size: 1rem;
+}
+
 body {
   color: $ontario-font-color;
   cursor: auto;
@@ -8,25 +18,68 @@ body {
   overflow-x: hidden;
 }
 
+
+/* -------------------------------
+    Typography
+--------------------------------- */
+
 a {
   text-decoration: none;
 
-  &:hover, 
+  &:hover,
   &:active {
     text-decoration: underline;
   }
 }
 
+p {
+  font-size: inherit;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+}
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 700;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-family: $header-font-family;
+}
+
 h1 {
   @include ontario-header-calc('h1');
+  letter-spacing: 0.04rem;
 }
 
 h2 {
   @include ontario-header-calc('h2');
+  letter-spacing: 0.02rem;
 }
 
 h3 {
   @include ontario-header-calc('h3');
+  letter-spacing: 0.02rem;
 }
 
 h4 {
@@ -58,13 +111,21 @@ h4 abbr {
   color: $ontario-light-gray;
 }
 
-small,
-.small {
+small {
   font-size: .9375rem;
 }
 
-input[type="checkbox"], 
-input[type="date"], 
+abbr,
+abbr[title] {
+  border-bottom: 2px dotted $ontario-abbreviation-color;
+}
+
+/* -------------------------------
+          Forms
+--------------------------------- */
+
+input[type="checkbox"],
+input[type="date"],
 input[type="datetime-local"],
 input[type="datetime"], 
 input[type="email"], 
@@ -103,10 +164,9 @@ select:required {
   margin: 0;
 }
 
-abbr, 
-abbr[title] {
-  border-bottom: 2px dotted $ontario-abbreviation-color;
-}
+/* -------------------------------
+    Tables
+--------------------------------- */
 
 table {
   border: 0 none transparent;
@@ -129,6 +189,11 @@ table caption {
   text-align: center;
 }
 
+
+/* -------------------------------
+    Figures and Images
+--------------------------------- */
+
 figcaption {
   background: $ontario-lightest-gray;
   margin-bottom: 1rem;
@@ -137,4 +202,39 @@ figcaption {
 
 figcaption p:last-of-type {
   margin-bottom: 0;
+}
+
+
+/* -------------------------------
+    Lists
+--------------------------------- */
+
+ol,
+ul {
+    padding-left: 2em;
+    margin-bottom: 1.25rem;
+}
+
+ol ul,
+ul ul {
+    list-style-type: circle;
+}
+
+dl dt {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+dl dd {
+    margin-bottom: .75rem;
+}
+
+/*
+    This is targeting any unordered/ordered list that has a paragraph
+    as a sibling. This is to mimimize the space between a paragraph
+    with a list next to it.
+*/
+p + ol,
+p + ul {
+    margin-top: -.75em;
 }
