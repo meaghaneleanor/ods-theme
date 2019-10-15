@@ -45,6 +45,7 @@ stages:
       - master
   variables:
     S3_DEPLOY_BUCKET: "${STAGE_S3_DEPLOY_BUCKET}"
+    CI_COMMIT_TAG: "staged"
 
 .app_prod_conditions: &app_prod_condition_def
   only:
