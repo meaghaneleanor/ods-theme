@@ -45,6 +45,8 @@ So for example, the latest CSS can be found at this location:
 https://files.ontario.ca/design-system/theme/latest/ods-theme.css
 ```
 
+More information available about file patterns in the [Design System Tech Deck](https://docs.google.com/presentation/d/1wJfxcDwUYSPI1g8gD9D4H1FH1QGXJzvxxQlBd_ZVCZk/).
+
 #### Fonts
 
 There is also a file called `fonts.css` that will refer to all the font files available to you:
