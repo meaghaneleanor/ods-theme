@@ -6,4 +6,4 @@ $fontDir: '../fonts' !default;
 $body-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $header-font-family: "Rawline", "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-@import url('#{$fontDir}/fonts.css');
+@import url("#{$fontDir}/fonts.css");
