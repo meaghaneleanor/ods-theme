@@ -9,7 +9,7 @@ stages:
   tags:
     - design
   script:
-    - npm install && npm run deploy
+    - npm install # "npm install" automatically runs "deploy" as a post-install step
   artifacts:
     expire_in: 24 hrs
     paths:
