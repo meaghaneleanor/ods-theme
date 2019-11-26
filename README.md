@@ -21,13 +21,13 @@ You have the option of either linking directly to a versioned file or just acces
 The folder for the most recent release:
 
 ```
-https://files.ontario.ca/design-system/theme/latest/
+https://files.ontario.ca/design-system/theme/css/latest/
 ```
 
 The folder for a historical version:
 
 ```
-https://files.ontario.ca/design-system/theme/VERSION_NUMBER/
+https://files.ontario.ca/design-system/theme/css/VERSION_NUMBER/
 ```
 
 Each set of files will have the following contents:
@@ -42,7 +42,7 @@ ods-theme.min.map.css
 So for example, the latest CSS can be found at this location:
 
 ```
-https://files.ontario.ca/design-system/theme/latest/ods-theme.css
+https://files.ontario.ca/design-system/theme/css/latest/ods-theme.css
 ```
 
 More information available about file patterns in the [Design System Tech Deck](https://docs.google.com/presentation/d/1wJfxcDwUYSPI1g8gD9D4H1FH1QGXJzvxxQlBd_ZVCZk/).
